@@ -1,0 +1,12 @@
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form__title {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  color: $color-default-white;
+  text-align: center;
+}

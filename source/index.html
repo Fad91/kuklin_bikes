@@ -11,7 +11,7 @@
 <body class="page__body">
   <header class="page__header header">
     <nav class="header__nav nav">
-      <div class="nav__logo">
+      <div class="nav__logo visually-hidden">
         <img src="img/desktop-logo-icon.svg" alt="Moon">
       </div>
       <ul class="nav__list main-menu">
@@ -26,9 +26,9 @@
         <h1 class="text-block__title">Мы продаем велосипеды</h1>
         <p class="text-block__content">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </div>
-      <div>
-        <form action="">
-          <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
+      <div class="header__form form-wrapper">
+        <form action="" class="form-wrapper__form feedback-form">
+          <h2 class="feedback-form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
           <input type="text" name="name" id="name" placeholder="Введите Ваше Имя">
           <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона">
           <button type="submit">Подобрать велосипед мечты</button>
@@ -39,9 +39,9 @@
   <main>
     <section class="facts-section">
       <div class="facts-section__wrapper">
-        <h3>Несколько фактов о нас</h3>
-        <ul>
-          <li>
+        <h3 class="facts-section__title">Несколько фактов о нас</h3>
+        <ul class="facts-section__list facts-list">
+          <li class="facts-list__item fact-item">
             <p>01</p>
             <p>Самый широкий выбор велосипедов!</p>
           </li>

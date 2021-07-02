@@ -1,8 +1,32 @@
+.text-block {
+  width: 400px;
+}
+
 .text-block__title {
-  @media (min-width: $desktop-width) {
-    color: $text-white;
-    font-weight: 700;
-    font-size: 46px;
-    line-height: 64px;
+  color: $color-default-white;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 64px;
+  margin: 0;
+  padding: 40px 0 20px 0;
+  position: relative;
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      background-image: url("../../img/desktop-logo-icon.svg");
+      width: 68px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
+}
+
+.text-block__content {
+  color: $color-opacity-08-white;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
 }

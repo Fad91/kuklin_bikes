@@ -1,9 +1,5 @@
 .address-section__wrapper {
 
-  @media (min-width: $mobile-width) {
-    @include mobile-content-width
-  }
-
   @media (min-width: $tablet-width) {
     @include tablet-content-width;
   }

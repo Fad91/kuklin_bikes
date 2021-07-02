@@ -1,15 +1,7 @@
 .intro-block {
-
-  @media (min-width: $mobile-width) {
-    @include mobile-content-width
-  }
-
-  @media (min-width: $tablet-width) {
-    @include tablet-content-width;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include desktop-content-width;
-    display: flex;
-  }
+  width: 880px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10px;
 }

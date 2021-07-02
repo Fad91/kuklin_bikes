@@ -1,13 +1,22 @@
 // файл стилей
-@import "fonts.scss";
-@import "mixins.scss";
-@import "variables.scss";
-@import "blocks/page.scss";
+
+// global
+@import "global/fonts.scss";
+@import "global/mixins.scss";
+@import "global/variables.scss";
+@import "global/reboot.scss";
+@import "global/utils.scss";
+
+// Blocks
 @import "blocks/nav.scss";
+@import "blocks/main-menu.scss";
 @import "blocks/header.scss";
 @import "blocks/intro-block.scss";
 @import "blocks/text-block.scss";
+@import "blocks/form-wrapper.scss";
+@import "blocks/feedback-form.scss";
 @import "blocks/facts-section.scss";
+@import "blocks/facts-list.scss";
 @import "blocks/bikes-section.scss";
 @import "blocks/video-section.scss";
 @import "blocks/address-section.scss";
