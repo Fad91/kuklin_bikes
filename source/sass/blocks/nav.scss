@@ -1,0 +1,20 @@
+.nav {
+
+  @media (min-width: $mobile-width) {
+    @include mobile-content-width
+  }
+
+
+  @media (min-width: $tablet-width) {
+    @include tablet-content-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-content-width;
+    color: $nav-text-white;
+  }
+}
+
+.nav__list {
+  list-style: none;
+}

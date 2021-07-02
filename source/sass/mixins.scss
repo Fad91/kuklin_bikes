@@ -1,0 +1,14 @@
+@mixin desktop-content-width {
+  width: 880px;
+  margin: 0 auto;
+}
+
+@mixin tablet-content-width {
+  width: 767px;
+  margin: 0 auto;
+}
+
+@mixin mobile-content-width {
+  width: 319px;
+  margin: 0 auto;
+}
