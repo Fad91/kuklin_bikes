@@ -1,0 +1,19 @@
+.fact-item {
+  width: 265px;
+  text-align: center;
+  padding: 10px;
+}
+
+.fact-item__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  color: $color-robins-egg-blue;
+}
+
+.fact-item__content {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: $color-default-black;
+}

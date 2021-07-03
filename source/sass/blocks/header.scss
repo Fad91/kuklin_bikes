@@ -1,9 +1,16 @@
 .header {
-  @media (min-width: $desktop-width) {
     background-image: url("../../img/desktop-bike-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
     min-height: 825px;
-  }
+    display: flex;
+    flex-direction: column;
+
+    @include vp--1023 {
+      min-height: 340px;
+      background-size: 767px 340px;
+      background-position: top center;
+      background-color: transparent;
+    }
 }

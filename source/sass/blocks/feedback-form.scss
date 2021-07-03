@@ -9,4 +9,27 @@
   line-height: 28px;
   color: $color-default-white;
   text-align: center;
+  margin: 0;
+}
+
+.feedback-form__input {
+  width: 327px;
+  padding: 10px 10px 14px 29px;
+  border: 1px solid $color-link-water;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.feedback-form__button {
+  width: 327px;
+  background-color: $color-robins-egg-blue;
+  color: $color-default-black;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+  padding: 10px 47px 10px 47px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 30px;
 }

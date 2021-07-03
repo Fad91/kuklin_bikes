@@ -1,10 +1,31 @@
+.video-section {
+  background-image: $gradient-black-to-white;
+  min-height: 806px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .video-section__wrapper {
+  width: 930px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  @media (min-width: $tablet-width) {
-    @include tablet-content-width;
-  }
+.video-section__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: $color-default-white;
+  text-align: center;
+}
 
-  @media (min-width: $desktop-width) {
-    @include desktop-content-width;
-  }
+.video-section__content {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: $color-opacity-07-white;
+  width: 340px;
 }

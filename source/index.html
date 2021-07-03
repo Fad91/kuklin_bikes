@@ -11,14 +11,25 @@
 <body class="page__body">
   <header class="page__header header">
     <nav class="header__nav nav">
-      <div class="nav__logo visually-hidden">
+      <div class="nav__logo">
         <img src="img/desktop-logo-icon.svg" alt="Moon">
+        <button class="nav__button nav__button--open nav__button--nojs nav__button--closed">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
       <ul class="nav__list main-menu">
-        <li>О нас</li>
-        <li>Виды велосипедов</li>
-        <li>Видео про велосипеды</li>
-        <li>Контакты</li>
+        <li class="main-menu__item">
+          <a href=#>О нас</a>
+        </li>
+        <li class="main-menu__item">
+          <a href=#>Виды велосипедов</a>
+        </li>
+        <li class="main-menu__item">
+          <a href=#>Видео про велосипеды</a>
+        </li>
+        <li class="main-menu__item">
+          <a href=#>Контакты</a>
+        </li>
       </ul>
     </nav>
     <div class="header__intro intro-block">
@@ -29,9 +40,9 @@
       <div class="header__form form-wrapper">
         <form action="" class="form-wrapper__form feedback-form">
           <h2 class="feedback-form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
-          <input type="text" name="name" id="name" placeholder="Введите Ваше Имя">
-          <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона">
-          <button type="submit">Подобрать велосипед мечты</button>
+          <input type="text" class="feedback-form__input" name="name" id="name" placeholder="Введите Ваше Имя">
+          <input type="tel" class="feedback-form__input" name="tel" id="tel" placeholder="Введите Ваш номер телефона">
+          <button type="submit" class="feedback-form__button">Подобрать велосипед мечты</button>
         </form>
       </div>
     </div>
@@ -39,62 +50,64 @@
   <main>
     <section class="facts-section">
       <div class="facts-section__wrapper">
-        <h3 class="facts-section__title">Несколько фактов о нас</h3>
+        <h2 class="facts-section__title">Несколько фактов о нас</h2>
         <ul class="facts-section__list facts-list">
           <li class="facts-list__item fact-item">
-            <p>01</p>
-            <p>Самый широкий выбор велосипедов!</p>
+            <h3 class="fact-item__title">01</h3>
+            <p class="fact-item__content">Самый широкий выбор велосипедов!</p>
           </li>
-          <li>
-            <p>02</p>
-            <p>Доставка велосипедов по всей России!</p>
+          <li class="facts-list__item fact-item">
+            <h3 class="fact-item__title">02</h3>
+            <p class="fact-item__content">Доставка велосипедов по всей России!</p>
           </li>
-          <li>
-            <p>03</p>
-            <p>Большой выбор крутых аксессуаров!</p>
+          <li class="facts-list__item fact-item">
+            <h3 class="fact-item__title">03</h3>
+            <p class="fact-item__content">Большой выбор крутых аксессуаров!</p>
           </li>
-          <li>
-            <p>04</p>
-            <p>Профессиональные консультации!</p>
+          <li class="facts-list__item fact-item">
+            <h3 class="fact-item__title">04</h3>
+            <p class="fact-item__content">Профессиональные консультации!</p>
           </li>
         </ul>
       </div>
     </section>
     <section class="bikes-section">
       <div class="bikes-section__wrapper">
-        <h3>
+        <h3 class="bikes-section__title">
           Виды велосипедов
         </h3>
-        <ul>
-          <li>
+        <ul class="bikes-section__list bikes-list">
+          <li class="bikes-list__item bike-item">
             <img src="img/desktop-road-bike-image.jpg" alt="Велосипед модели Phoenix X3">
-            <p>Дорожный велосипед</p>
+            <h4 class="bike-item__title">Дорожный велосипед</h4>
           </li>
-          <li><img src="img/desktop-mountain-bike-image.jpg" alt="Велосипед модели Phoenix M23">
-            <p>Горный велосипед</p>
+          <li class="bikes-list__item bike-item">
+            <img src="img/desktop-mountain-bike-image.jpg" alt="Велосипед модели Phoenix M23">
+            <h4 class="bike-item__title">Горный велосипед</h4>
           </li>
-          <li><img src="img/desktop-kids-bike-image.jpg" alt="Велосипед модели Phoenix K10">
-            <p>Детский велосипед</p>
+          <li class="bikes-list__item bike-item">
+            <img src="img/desktop-kids-bike-image.jpg" alt="Велосипед модели Phoenix K10">
+            <h4 class="bike-item__title">Детский велосипед</h4>
           </li>
         </ul>
       </div>
     </section>
     <section class="video-section">
       <div class="video-section__wrapper">
-        <h3>Видео про велосипеды</h3>
-        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <h4 class="video-section__title">Видео про велосипеды</h4>
+        <p class="video-section__content">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <img src="img/desktop-video-bike-image.jpg" alt="Видео про велосипеды">
       </div>
     </section>
     <section class="address-section">
       <div class="address-section__wrapper">
-        <h3>Как нас найти?</h3>
-        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <h5 class="address-section__title">Как нас найти?</h5>
+        <p class="address-section__content">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         <img src="img/desktop-map-image.png" alt="Местоположениее Moon">
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="page__footer footer">
     <div class="links">
       <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
       <a href="tel:+749978468446">+7 (499) -784-684-46</a>

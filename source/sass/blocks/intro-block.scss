@@ -1,7 +1,13 @@
 .intro-block {
   width: 880px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   padding: 50px 10px;
+
+  @include vp--1023 {
+    width: 767px;
+    flex-direction: column;
+    align-items: center;
+  }
 }

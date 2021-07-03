@@ -1,19 +1,30 @@
 // viewports
 
-$tablet-width: 767px;
-$desktop-width: 1023px;
+$vp--768: 768px;
+$vp--1024: 1024px;
 
 // colors
 
 // Default
 
 $color-default-white: #ffffff;
+$color-default-black: #000000;
 
 // Base
 
+$color-opacity-02-white: rgba(255, 255, 255, 0.2);
 $color-opacity-07-white: rgba(255, 255, 255, 0.7);
 $color-opacity-08-white: rgba(255, 255, 255, 0.8);
+$color-robins-egg-blue: #0ad9c6;
+$color-link-water: #c9ccd4;
+$color-alice-blue: #f6f7f9;
+$color-nero: #1f1f1f;
+$color-black-russian: #131314;
 
+
+// Gradients
+
+$gradient-black-to-white: linear-gradient(to bottom, $color-black-russian 80%, $color-default-white 80%);
 
 // Typography
 

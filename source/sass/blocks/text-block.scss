@@ -12,15 +12,21 @@
   position: relative;
 
   &::after {
-    @media (min-width: $desktop-width) {
+    @include vp--1024 {
       content: "";
-      background-image: url("../../img/desktop-logo-icon.svg");
+      background-image: url("../img/desktop-logo-icon.svg");
       width: 68px;
       height: 20px;
       position: absolute;
       top: 0;
       left: 0;
     }
+  }
+
+  @include vp--1023 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
   }
 }
 
@@ -29,4 +35,10 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
+
+  @include vp--1023 {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+  }
 }

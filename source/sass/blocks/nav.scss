@@ -1,14 +1,33 @@
 .nav {
-width: 880px;
-margin: 0 auto;
-padding: 15px 5px;
-color: $color-opacity-07-white;
+  width: 880px;
+  margin: 0 auto;
+  padding: 15px 5px;
+  color: $color-opacity-07-white;
+  border-bottom: 1px solid $color-opacity-02-white;
 
-  @media (min-width: $tablet-width) {
-    @include tablet-content-width;
+  @include vp--1023 {
+    width: 767px;
+    padding: 0;
   }
 }
 
-.nav__list {
-  list-style: none;
+.nav__logo {
+  display: none;
+
+  @include vp--1023 {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav__button {
+  display: none;
+
+  @include vp--1023 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $color-robins-egg-blue;
+    border: none;
+  }
 }

@@ -2,4 +2,10 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
+  margin: 20px 0;
+
+  @include vp--1023 {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }

@@ -1,14 +1,19 @@
-@mixin desktop-content-width {
-  width: 880px;
-  margin: 0 auto;
+// Desktop-first
+
+@mixin vp--1024 {
+  @media (min-width: $vp--1024) {
+    @content;
+  }
 }
 
-@mixin tablet-content-width {
-  width: 767px;
-  margin: 0 auto;
+@mixin vp--1023 {
+  @media (max-width: $vp--1024 - 1) {
+    @content;
+  }
 }
 
-@mixin mobile-content-width {
-  width: 319px;
-  margin: 0 auto;
+@mixin vp--767 {
+  @media (max-width: $vp--768 - 1) {
+    @content;
+  }
 }
