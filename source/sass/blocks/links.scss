@@ -4,4 +4,8 @@
   display: flex;
   justify-content: space-around;
   padding: 30px;
+
+  @include vp--1023 {
+    width: 768px;
+  }
 }

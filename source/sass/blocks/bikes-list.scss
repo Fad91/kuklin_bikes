@@ -1,4 +1,9 @@
 .bikes-list {
   display: flex;
   justify-content: space-between;
+
+  @include vp--1023 {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }

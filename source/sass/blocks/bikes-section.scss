@@ -5,6 +5,11 @@
 .bikes-section__wrapper {
   width: 1220px;
   margin: 0 auto;
+
+  @include vp--1023 {
+    width: 768px;
+    margin: 0 auto;
+  }
 }
 
 .bikes-section__title {
