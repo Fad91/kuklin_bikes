@@ -8,6 +8,11 @@
   @include vp--1023 {
     width: 767px;
     padding: 0;
+    border: none;
+  }
+
+  @include vp--767 {
+    width: 320px;
   }
 }
 
@@ -17,6 +22,13 @@
   @include vp--1023 {
     display: flex;
     justify-content: space-between;
+    padding-left: 21px;
+    width: 768px;
+    margin: 0 auto;
+
+    @include vp--767 {
+      width: 320px;
+    }
   }
 }
 

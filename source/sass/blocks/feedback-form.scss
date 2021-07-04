@@ -1,6 +1,10 @@
 .feedback-form {
   display: flex;
   flex-direction: column;
+
+  @include vp--767 {
+    align-items: center;
+  }
 }
 
 .feedback-form__title {
@@ -10,6 +14,17 @@
   color: $color-default-white;
   text-align: center;
   margin: 0;
+
+  @include vp--1023 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color-default-black;
+  }
+
+  @include vp--767 {
+    padding: 10px;
+  }
 }
 
 .feedback-form__input {
@@ -18,6 +33,10 @@
   border: 1px solid $color-link-water;
   border-radius: 6px;
   margin-top: 20px;
+
+  @include vp--767 {
+    width: 288px;
+  }
 }
 
 .feedback-form__button {
@@ -28,8 +47,13 @@
   font-size: 15px;
   line-height: 21px;
   text-align: center;
-  padding: 10px 47px 10px 47px;
+  padding: 10px 47px;
   border: none;
   border-radius: 6px;
   margin-top: 30px;
+
+  @include vp--767 {
+    width: 288px;
+    padding: 10px 28px;
+  }
 }

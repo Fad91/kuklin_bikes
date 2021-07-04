@@ -10,8 +10,13 @@
     @include vp--1023 {
       min-height: 340px;
       background-image: url("../../img/tablet-bike-background.jpg");
-      background-size: 767px 340px;
+      // background-size: 767px 340px;
       background-position: top center;
       background-color: transparent;
+    }
+
+    @include vp--767 {
+      min-height: 390px;
+      background-image: url("../../img/mobile-bike-background.jpg");
     }
 }

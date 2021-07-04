@@ -6,8 +6,33 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
+
+  @include vp--1023 {
+    flex-direction: column;
+    background-color: $color-default-white;
+    padding: 0;
+    padding-top: 30px;
+  }
+}
+
+.main-menu--closed {
+  @include vp--1023 {
+    display: none;
+  }
+}
+
+.main-menu__item {
+  @include vp--1023 {
+    background-color: $color-white-smoke;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
 }
 
 .main-menu__item a {
   color: inherit;
+
+  @include vp--1023 {
+    color: $color-tuna;
+  }
 }

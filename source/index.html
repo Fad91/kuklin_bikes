@@ -18,14 +18,14 @@
 
 <body class="page__body">
   <header class="page__header header">
+    <div class="nav__logo">
+      <img src="img/desktop-logo-icon.svg" alt="Moon">
+      <button class="nav__button nav__button--open nav__button--nojs nav__button--closed">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
     <nav class="header__nav nav">
-      <div class="nav__logo">
-        <img src="img/desktop-logo-icon.svg" alt="Moon">
-        <button class="nav__button nav__button--open nav__button--nojs nav__button--closed">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-      <ul class="nav__list main-menu">
+      <ul class="nav__list main-menu main-menu--closed">
         <li class="main-menu__item">
           <a href=#>О нас</a>
         </li>
@@ -187,6 +187,7 @@
       <a href="tel:+749978468446">+7 (499) -784-684-46</a>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
