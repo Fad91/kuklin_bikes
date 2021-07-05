@@ -41,5 +41,17 @@
     height: 50px;
     background-color: $color-robins-egg-blue;
     border: none;
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    width: 23px;
+    height: 1px;
+    background: $color-default-black;
+    position: absolute;
+    top: 25px;
+    left: 14px;
+    box-shadow: 0 5px 0 0,0 -5px 0 0;
   }
 }
