@@ -6,11 +6,11 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
-// const imagemin = require("gulp-imagemin");
+const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const uglify = require("gulp-uglify-es").default;
+// const uglify = require("gulp-uglify-es").default;
 const htmlmin = require("gulp-htmlmin");
 const sync = require("browser-sync").create();
 
@@ -37,21 +37,21 @@ exports.styles = styles;
 
 // images
 
-// const images = () => {
-//   return gulp.src("source/img/**/*.{jpg,png,svg}")
-//     .pipe(imagemin([
-//       imagemin.mozjpeg({
-//         progressive: true
-//       }),
-//       imagemin.optipng({
-//         optimizationLevel: 3
-//       }),
-//       imagemin.svgo()
-//     ]))
-//     .pipe(gulp.dest("build/img"))
-// }
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"))
+}
 
-// exports.images = images;
+exports.images = images;
 
 // webP
 
@@ -88,15 +88,15 @@ const html = () => {
 
 // Scripts
 
-const scripts = () => {
-  return gulp.src("source/js/script.js")
-    .pipe(uglify())
-    .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
-}
+// const scripts = () => {
+//   return gulp.src("source/js/script.js")
+//     .pipe(uglify())
+//     .pipe(rename("script.min.js"))
+//     .pipe(gulp.dest("build/js"))
+//     .pipe(sync.stream());
+// }
 
-exports.scripts = scripts;
+// exports.scripts = scripts;
 
 // Copy
 
@@ -105,6 +105,7 @@ const copy = (done) => {
       "source/fonts/*.woff",
       "source/fonts/*.woff2",
       "source/*.ico",
+      "source/js/*.js",
       "source/img/**/*.{jpg,png,svg}",
     ], {
       base: "source"
@@ -164,10 +165,10 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    // scripts,
     sprite,
     copy,
-    // images,
+    images,
     createWebp
   ));
 
@@ -178,7 +179,7 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    // scripts,
     sprite,
     copy,
     createWebp
