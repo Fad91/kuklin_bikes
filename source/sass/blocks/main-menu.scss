@@ -24,7 +24,7 @@
   }
 }
 
-.main-menu__item {
+.main-menu li {
   cursor: pointer;
 
   @include vp--1023 {

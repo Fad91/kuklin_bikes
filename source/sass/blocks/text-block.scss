@@ -10,7 +10,7 @@
   }
 }
 
-.text-block__title {
+.text-block h1 {
   color: $color-default-white;
   font-weight: 700;
   font-size: 46px;
@@ -42,7 +42,7 @@
   }
 }
 
-.text-block__content {
+.text-block p {
   color: $color-opacity-08-white;
   font-weight: 300;
   font-size: 20px;
