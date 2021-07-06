@@ -12,6 +12,9 @@
     background-color: $color-default-white;
     padding: 0;
     padding-top: 30px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
   }
 }
 
@@ -22,6 +25,8 @@
 }
 
 .main-menu__item {
+  cursor: pointer;
+
   @include vp--1023 {
     background-color: $color-white-smoke;
     padding: 0 10px;

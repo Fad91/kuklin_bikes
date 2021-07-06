@@ -20,6 +20,10 @@
   @include vp--1023 {
     width: 768px;
   }
+
+  @include vp--767 {
+    width: 320px;
+  }
 }
 
 .video-section__title {
@@ -28,6 +32,14 @@
   line-height: 30px;
   color: $color-default-white;
   text-align: center;
+
+  @include vp--767 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
 }
 
 .video-section__content {
@@ -37,4 +49,25 @@
   text-align: center;
   color: $color-opacity-07-white;
   width: 340px;
+
+  @include vp--767 {
+    width: 300px;
+    margin-bottom: 50px;
+  }
+}
+
+.video-section__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-section__item button {
+  width: 65px;
+  height: 65px;
+  background-color: $color-robins-egg-blue;
+  border-radius: 50%;
+  border: none;
+  margin-top: -117px;
 }

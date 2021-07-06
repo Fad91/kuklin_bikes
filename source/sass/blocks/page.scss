@@ -1,0 +1,26 @@
+.page__header {
+  background-image: url("../../img/desktop-bike-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  min-height: 825px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp--1023 {
+    min-height: 340px;
+    background-image: url("../../img/tablet-bike-background.jpg");
+    // background-size: 767px 340px;
+    background-position: top center;
+    background-color: transparent;
+  }
+
+  @include vp--767 {
+    min-height: 390px;
+    background-image: url("../../img/mobile-bike-background.jpg");
+  }
+}
+
+.page__footer {
+  min-height: 160px;
+}

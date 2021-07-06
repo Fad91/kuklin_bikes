@@ -8,6 +8,10 @@
   @include vp--1023 {
     width: 768px;
   }
+
+  @include vp--767 {
+    width: 320px;
+  }
 }
 
 .address-section__title {
@@ -35,5 +39,10 @@
     line-height: 31px;
     color: $color-opacity-07-black;
     width: 629px;
+  }
+
+  @include vp--767 {
+    width: 100%;
+    padding: 0 31px;
   }
 }

@@ -4,6 +4,7 @@
   padding: 15px 5px;
   color: $color-opacity-07-white;
   border-bottom: 1px solid $color-opacity-02-white;
+  position: relative;
 
   @include vp--1023 {
     width: 767px;
