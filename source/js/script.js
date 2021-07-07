@@ -2,7 +2,7 @@
 //  Variables
 
 const mainMenu = document.querySelector(".main-menu");
-const menuLink = document.querySelector("main-menu__item a");
+const menuLinks = Array.from(document.querySelectorAll(".main-menu__item a"));
 const navButton = document.querySelector(".nav__button");
 const phoneInput = document.querySelector("#tel");
 const form = document.querySelector(".feedback-form");
@@ -43,8 +43,3 @@ phoneInput.addEventListener("invalid", function () {
 
 // Smooth scroll
 
-menuLink.addEventListener("click", function () {
-  sections.forEach(function (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  });
-});

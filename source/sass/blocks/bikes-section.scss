@@ -5,6 +5,8 @@
 .bikes-section__wrapper {
   width: 1230px;
   margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 113px;
 
   @include vp--1023 {
     width: 768px;

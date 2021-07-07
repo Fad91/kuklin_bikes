@@ -1,5 +1,5 @@
 .facts-section {
-  min-height: 565px;
+  min-height: 504px;
   display: flex;
   align-items: center;
 }
@@ -22,7 +22,7 @@
   font-size: 30px;
   line-height: 30px;
   text-align: center;
-  margin: 0;
+  margin: 7px 0px 28px;
 
   @include vp--1023 {
     font-weight: 600;

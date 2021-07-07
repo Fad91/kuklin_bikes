@@ -1,5 +1,6 @@
 .text-block {
   width: 400px;
+  padding:10px 0;
 
   @include vp--1023 {
     margin-bottom: 69px;
@@ -16,8 +17,9 @@
   font-size: 46px;
   line-height: 64px;
   margin: 0;
-  padding: 40px 0 20px 0;
+  padding: 66px 3px 6px;
   position: relative;
+  letter-spacing: 1px;
 
   &::after {
     @include vp--1024 {
@@ -26,7 +28,7 @@
       width: 68px;
       height: 20px;
       position: absolute;
-      top: 0;
+      top: 15px;
       left: 0;
     }
   }
@@ -47,6 +49,7 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
+  margin-bottom: 0;
 
   @include vp--1023 {
     font-weight: 300;

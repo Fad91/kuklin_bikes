@@ -1,9 +1,8 @@
 .bike-item {
   position: relative;
   z-index: 1;
-  width: 405px;
   text-align: center;
-  padding-left: 60px;
+  padding-left: 50px;
 
 
   @include vp--1023 {
@@ -104,6 +103,11 @@
   font-size: 22px;
   line-height: 34px;
   text-align: center;
+  margin-top: 18px;
+}
+
+.bike-item:nth-child(3n) h4 {
+  margin-top: 10px;
 }
 
 .bike-item img {
