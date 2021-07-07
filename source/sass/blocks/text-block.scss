@@ -1,9 +1,11 @@
 .text-block {
   width: 400px;
-  padding:10px 0;
+  padding: 10px 0;
 
   @include vp--1023 {
-    margin-bottom: 69px;
+    margin-bottom: 72px;
+    width: 525px;
+    text-align: center;
   }
 
   @include vp--767 {
@@ -20,6 +22,14 @@
   padding: 66px 3px 6px;
   position: relative;
   letter-spacing: 1px;
+
+  @include vp--1023 {
+    padding: 55px 10px 6px;
+  }
+
+  @include vp--767 {
+    padding: 41px 10px 6px;
+  }
 
   &::after {
     @include vp--1024 {
@@ -56,9 +66,12 @@
     font-size: 18px;
     line-height: 32px;
     text-align: center;
+    padding: 0 30px;
+    margin-top: 15px;
   }
 
   @include vp--767 {
     padding: 10px;
+    margin-top: 5px;
   }
 }

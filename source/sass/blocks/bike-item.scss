@@ -7,14 +7,16 @@
 
   @include vp--1023 {
     width: 337px;
+    margin-bottom: 20px;
   }
 
   @include vp--767 {
     width: 320px;
     padding: 0 25px;
+    margin-bottom: 10px;
   }
-
-  &:nth-child(1n):before {
+}
+ .bike-item:first-child::before {
     content: "";
     background-image: url("../../img/desktop-round-icon.svg");
     background-repeat: no-repeat;
@@ -26,18 +28,28 @@
     left: 0;
     z-index: -1;
 
-    @include vp--767 {
+    @include vp--1023 {
       width: 127px;
       height: 127px;
+      top: 207px;
+      left: 21px;
+    }
+
+    @include vp--767 {
       top: 204px;
       left: 0px;
+      width: 127px;
+      height: 127px;
     }
   }
-}
 
 .bike-item:nth-child(2n) {
   padding-top: 30px;
   padding-left: 25px;
+
+  @include vp--1023 {
+    padding: 0;
+  }
 
   &::before {
     content: "";
@@ -88,9 +100,14 @@
     left: 81%;
     z-index: 1;
 
-    @include vp--767 {
+    @include vp--1023 {
       width: 68px;
       height: 68px;
+      top: -20px;
+      left: 80%;
+    }
+
+    @include vp--767 {
       top: 30px;
       left: 80%;
     }
@@ -108,6 +125,10 @@
 
 .bike-item:nth-child(3n) h4 {
   margin-top: 10px;
+
+  @include vp--1023 {
+    margin-top: 17px;
+  }
 }
 
 .bike-item img {

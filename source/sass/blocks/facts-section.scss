@@ -2,6 +2,11 @@
   min-height: 504px;
   display: flex;
   align-items: center;
+
+  @include vp--1023 {
+    align-items: flex-start;
+    min-height: 476px;
+  }
 }
 
 .facts-section__wrapper {
@@ -10,10 +15,12 @@
 
   @include vp--1023 {
     width: 768px;
+    margin: 43px auto;
   }
 
   @include vp--767 {
     width: 320px;
+    margin: 43px auto 55px;
   }
 }
 
@@ -28,5 +35,10 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 41px;
+    margin: 7px 0 7px;
+  }
+
+  @include vp--767 {
+    margin: 9px 0 19px;
   }
 }

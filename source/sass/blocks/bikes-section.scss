@@ -11,14 +11,18 @@
   @include vp--1023 {
     width: 768px;
     margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 20px;
   }
 
   @include vp--767 {
     width: 320px;
+    padding-top: 50px;
+    padding-bottom: 14px;
   }
 }
 
-.bikes-section__title {
+.bikes-section h3 {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
@@ -29,5 +33,6 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 41px;
+    margin-top: 0;
   }
 }

@@ -7,9 +7,12 @@
   @include vp--1023 {
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 29px 50px 0 27px;
   }
 
   @include vp--767 {
     padding: 0;
+    padding: 6px 20px 0 17px;
+    margin: 0;
   }
 }

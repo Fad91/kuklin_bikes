@@ -3,10 +3,11 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  padding: 35px 128px 35px 117px;
 
   @include vp--1023 {
     width: 768px;
+    padding: 14px 72px 35px 67px;
   }
 }
 
