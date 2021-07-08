@@ -67,3 +67,43 @@
     box-shadow: 0 5px 0 0, 0 -5px 0 0;
   }
 }
+
+.nav__button--open {
+
+  @include vp--1023 {
+    border: none;
+    padding: 0;
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 32px;
+      background-color: $color-default-black;
+      border: none;
+      padding: 0;
+      display: block;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 10px;
+      left: 25px;
+    }
+
+    &::after {
+      content: "";
+      width: 2px;
+      height: 40px;
+      background-color: $color-default-black;
+      border: none;
+      padding: 0;
+      display: block;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 6px;
+      left: 24px;
+    }
+  }
+}

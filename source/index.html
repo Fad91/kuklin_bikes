@@ -20,8 +20,10 @@
   <header class="page__header">
     <nav class="nav">
       <div class="nav__logo">
-        <a><img src="img/desktop-logo-icon.svg" alt="Moon"></a>
-        <button class="nav__button nav__button--open nav__button--nojs nav__button--closed">
+        <a>
+          <img src="img/desktop-logo-icon.svg" width="67" height="20" alt="Moon">
+        </a>
+        <button class="nav__button nav__button--nojs nav__button--closed">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
@@ -51,7 +53,7 @@
         <label for="name" class="visually-hidden">Ваше имя</label>
         <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
         <label for="tel" class="visually-hidden">Ваш телефон</label>
-        <button type="submit" class="feedback-form__button">Подобрать велосипед мечты</button>
+        <button type="submit">Подобрать велосипед мечты</button>
       </form>
     </div>
   </header>
@@ -85,52 +87,52 @@
         <ul class="bikes-list">
           <li class="bikes-list__item bike-item">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)"
-                srcset="img/desktop-road-bike-image.webp 1x, img/desktop-road-bike-image@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/tablet-road-bike-image.webp 1x, img/tablet-road-bike-image@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/mobile-road-bike-image.webp 1x, img/mobile-road-bike-image@2x.webp 2x">
-              <source media="(min-width: 1024px)"
-                srcset="img/desktop-road-bike-image.jpg 1x, img/desktop-road-bike-image@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/tablet-road-bike-image.jpg 1x, img/tablet-road-bike-image@2x.jpg 2x">
-              <img src="img/mobile-road-bike-image.jpg" srcset="img/mobile-road-bike-image@2x.jpg 2x"
-                alt="Велосипед модели Phoenix X3">
+              <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/mobile-road-bike-image.webp 1x, img/mobile-road-bike-image@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/tablet-road-bike-image.webp 1x, img/tablet-road-bike-image@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/desktop-road-bike-image.webp 1x, img/desktop-road-bike-image@2x.webp 2x">
+            <source media="(max-width: 767px)"
+              srcset="img/mobile-road-bike-image.jpg 1x, img/mobile-road-bike-image@2x.jpg 2x">
+            <source media="(max-width: 1023px)"
+              srcset="img/tablet-road-bike-image.jpg 1x, img/tablet-road-bike-image@2x.jpg 2x">
+            <img src="img/desktop-road-bike-image.jpg" width="342" height="503"
+              srcset="img/desktop-road-bike-image@2x.jpg 2x" alt="Велосипед модели Phoenix K10">
             </picture>
             <h4>Дорожный велосипед</h4>
           </li>
           <li class="bikes-list__item bike-item">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)"
-                srcset="img/desktop-mountain-bike-image.webp 1x, img/desktop-mountain-bike-image@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/tablet-mountain-bike-image.webp 1x, img/tablet-mountain-bike-image@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/mobile-mountain-bike-image.webp 1x, img/mobile-mountain-bike-image@2x.webp 2x">
-              <source media="(min-width: 1024px)"
-                srcset="img/desktop-mountain-bike-image.jpg 1x, img/desktop-mountain-bike-image@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/tablet-mountain-bike-image.jpg 1x, img/tablet-mountain-bike-image@2x.jpg 2x">
-              <img src="img/mobile-mountain-bike-image.jpg" srcset="img/mobile-mountain-bike-image@2x.jpg 2x"
-                alt="Велосипед модели Phoenix M29">
+              <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/mobile-mountain-bike-image.webp 1x, img/mobile-mountain-bike-image@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/tablet-mountain-bike-image.webp 1x, img/tablet-mountain-bike-image@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/desktop-mountain-bike-image.webp 1x, img/desktop-mountain-bike-image@2x.webp 2x">
+            <source media="(max-width: 767px)"
+              srcset="img/mobile-mountain-bike-image.jpg 1x, img/mobile-mountain-bike-image@2x.jpg 2x">
+            <source media="(max-width: 1023px)"
+              srcset="img/tablet-mountain-bike-image.jpg 1x, img/tablet-mountain-bike-image@2x.jpg 2x">
+            <img src="img/desktop-mountain-bike-image.jpg" width="342" height="566"
+              srcset="img/desktop-mountain-bike-image@2x.jpg 2x" alt="Велосипед модели Phoenix K10">
             </picture>
             <h4>Горный велосипед</h4>
           </li>
           <li class="bikes-list__item bike-item">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)"
-                srcset="img/desktop-kids-bike-image.webp 1x, img/desktop-kids-bike-image@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/mobile-kids-bike-image.webp 1x, img/mobile-kids-bike-image@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/tablet-kids-bike-image.webp 1x, img/tablet-kids-bike-image@2x.webp 2x">
               <source type="image/webp"
-                srcset="img/mobile-kids-bike-image.webp 1x, img/mobile-kids-bike-image@2x.webp 2x">
-              <source media="(min-width: 1024px)"
-                srcset="img/desktop-kids-bike-image.jpg 1x, img/desktop-kids-bike-image@2x.jpg 2x">
-              <source media="(min-width: 768px)"
+                srcset="img/desktop-kids-bike-image.webp 1x, img/desktop-kids-bike-image@2x.webp 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/mobile-kids-bike-image.jpg 1x, img/mobile-kids-bike-image@2x.jpg 2x">
+              <source media="(max-width: 1023px)"
                 srcset="img/tablet-kids-bike-image.jpg 1x, img/tablet-kids-bike-image@2x.jpg 2x">
-              <img src="img/mobile-kids-bike-image.jpg" srcset="img/mobile-kids-bike-image@2x.jpg 2x"
-                alt="Велосипед модели Phoenix K10">
+              <img src="img/desktop-kids-bike-image.jpg" width="342" height="512"
+                srcset="img/desktop-kids-bike-image@2x.jpg 2x" alt="Велосипед модели Phoenix K10">
             </picture>
             <h4>Детский велосипед</h4>
           </li>
@@ -144,21 +146,24 @@
         </p>
         <div class="video-section__item">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)"
-              srcset="img/desktop-video-bike-image.webp 1x, img/desktop-video-bike-image@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/mobile-video-bike-image.webp 1x, img/mobile-video-bike-image@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
               srcset="img/tablet-video-bike-image.webp 1x, img/tablet-video-bike-image@2x.webp 2x">
             <source type="image/webp"
-              srcset="img/mobile-video-bike-image.webp 1x, img/mobile-video-bike-image@2x.webp 2x">
-            <source media="(min-width: 1024px)"
-              srcset="img/desktop-video-bike-image.jpg 1x, img/desktop-video-bike-image@2x.jpg 2x">
-            <source media="(min-width: 768px)"
+              srcset="img/desktop-video-bike-image.webp 1x, img/desktop-video-bike-image@2x.webp 2x">
+            <source media="(max-width: 767px)"
+              srcset="img/mobile-video-bike-image.jpg 1x, img/mobile-video-bike-image@2x.jpg 2x">
+            <source media="(max-width: 1023px)"
               srcset="img/tablet-video-bike-image.jpg 1x, img/tablet-video-bike-image@2x.jpg 2x">
-            <img src="img/mobile-video-bike-image.jpg" srcset="img/mobile-video-bike-image@2x.jpg 2x"
-              alt="Видео про велосипеды">
+            <img src="img/desktop-video-bike-image.jpg" width="929" height="522"
+              srcset="img/mobile-video-bike-image@2x.jpg 2x" alt="Видео про велосипеды">
           </picture>
           <button>
             <span class="visually-hidden">Play</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18" fill="none">
+              <use xlink:href="img/sprite_auto.svg#icon-play"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -168,14 +173,15 @@
         <h5>Как нас найти?</h5>
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         <picture>
-          <source type="image/webp" media="(min-width: 1024px)"
-            srcset="img/desktop-map-image.webp 1x, img/desktop-map-image@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/mobile-map-image.webp 1x, img/mobile-map-image@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
             srcset="img/tablet-map-image.webp 1x, img/tablet-map-image@2x.webp 2x">
-          <source type="image/webp" srcset="img/mobile-map-image.webp 1x, img/mobile-map-image@2x.webp 2x">
-          <source media="(min-width: 1024px)" srcset="img/desktop-map-image.png 1x, img/desktop-map-image@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/tablet-map-image.png 1x, img/tablet-map-image@2x.png 2x">
-          <img src="img/mobile-map-image.png" srcset="img/mobile-map-image@2x.png 2x" alt="Видео про велосипеды">
+          <source type="image/webp" srcset="img/desktop-map-image.webp 1x, img/desktop-map-image@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/mobile-map-image.png 1x, img/mobile-map-image@2x.png 2x">
+          <source media="(max-width: 1023px)" srcset="img/tablet-map-image.png 1x, img/tablet-map-image@2x.png 2x">
+          <img src="img/desktop-map-image.png" width="957" height="530" srcset="img/desktop-map-image@2x.png 2x"
+            alt="Видео про велосипеды">
         </picture>
       </div>
     </section>
@@ -184,10 +190,10 @@
     <div class="links">
       <a href="mailto:puteshestviemechta@gmail.ru"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"
           fill="none">
-          <use xlink:href="img/sprite.svg#desktop-mail-icon"></use>
+          <use xlink:href="img/sprite_auto.svg#icon-mail-desktop"></use>
         </svg>puteshestviemechta@gmail.ru</a>
-      <a href="tel:+749978468446"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" fill="none">
-          <use xlink:href="img/sprite.svg#desktop-phone-icon"></use>
+      <a href="tel:+749978468446"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none">
+          <use xlink:href="img/sprite_auto.svg#icon-phone-desktop"></use>
         </svg>+7 (499) -784-684-46</a>
     </div>
   </footer>

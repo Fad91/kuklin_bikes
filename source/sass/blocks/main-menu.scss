@@ -15,6 +15,7 @@
     position: absolute;
     width: 100%;
     z-index: 1;
+    overflow-y:scroll;
   }
 }
 
@@ -39,5 +40,13 @@
 
   @include vp--1023 {
     color: $color-tuna;
+  }
+
+  &:hover {
+    color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-robins-egg-blue;
   }
 }

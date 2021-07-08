@@ -58,7 +58,7 @@
   }
 }
 
-.feedback-form__button {
+.feedback-form button {
   width: 327px;
   background-color: $color-robins-egg-blue;
   color: $color-default-black;
@@ -82,5 +82,15 @@
     width: 288px;
     padding: 13px 28px;
     margin-left: 0;
+  }
+
+  &:hover {
+    color: $color-opacity-05-black;
+    text-decoration: underline;
+    box-shadow: 0px 0px 1px 2px $color-robins-egg-blue;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 5px 1px $color-opacity-07-white;
   }
 }

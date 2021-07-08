@@ -80,6 +80,18 @@
   }
 }
 
+.video-section__item img {
+  @include vp--1023 {
+    width: 503px;
+    height: 282px;
+  }
+
+  @include vp--767 {
+    width: 288px;
+    height: 161px;
+  }
+}
+
 .video-section__item button {
   width: 65px;
   height: 65px;
@@ -88,15 +100,30 @@
   border: none;
   margin-top: -296px;
 
-  @include vp--1023{
+  @include vp--1023 {
     margin-top: -190px;
     width: 90px;
     height: 90px;
   }
 
   @include vp--767 {
-    margin-top: -118px;
+    margin-top: -115px;
     width: 65px;
     height: 65px;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 1px 4px $color-opacity-02-white;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 4px 1px $color-default-white;
+  }
+}
+
+.video-section__item svg {
+  @include vp--767 {
+    margin-top: 2px;
+    margin-left: 5px;
   }
 }

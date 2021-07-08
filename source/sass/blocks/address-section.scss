@@ -13,6 +13,7 @@
 
   @include vp--767 {
     width: 320px;
+    margin-top: 67px;
   }
 }
 
@@ -29,6 +30,12 @@
     font-size: 24px;
     line-height: 30px;
     margin-top: 0;
+  }
+
+  @include vp--767 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -50,6 +57,19 @@
 
   @include vp--767 {
     width: 100%;
-    padding: 0 31px;
+    padding: 0 29px;
+    letter-spacing: .6px;
+  }
+}
+
+.address-section img {
+  @include vp--1023 {
+    width: 698px;
+    height: 545px;
+  }
+
+  @include vp--767 {
+    width: 320px;
+    height: 250px;
   }
 }

@@ -9,18 +9,21 @@ const form = document.querySelector(".feedback-form");
 let sections = Array.from(document.querySelectorAll("section"));
 
 // Navigation
+// При нажатии на меню надо заблокировать скролл для body, и при нажатии на ссылку надо закрывать меню(?)
+// и разблокировать скролл(?)
 
 mainMenu.classList.add("main-menu--closed");
 
 navButton.addEventListener("click", function () {
   mainMenu.classList.toggle("main-menu--closed");
   mainMenu.classList.toggle("main-menu--opened");
-  if (mainMenu.classList.contains("main-menu--opened")) {
-    console.log(1);
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+  navButton.classList.toggle("nav__button--open")
+  // if (mainMenu.classList.contains("main-menu--opened")) {
+  //   console.log(1);
+  //   document.body.style.overflow = "hidden";
+  // } else {
+  //   document.body.style.overflow = "";
+  // }
 });
 
 // Blocking scroll

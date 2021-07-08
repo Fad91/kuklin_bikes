@@ -16,32 +16,40 @@
     margin-bottom: 10px;
   }
 }
- .bike-item:first-child::before {
-    content: "";
-    background-image: url("../../img/desktop-round-icon.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    top: 146px;
-    left: 0;
-    z-index: -1;
 
-    @include vp--1023 {
-      width: 127px;
-      height: 127px;
-      top: 207px;
-      left: 21px;
-    }
-
-    @include vp--767 {
-      top: 204px;
-      left: 0px;
-      width: 127px;
-      height: 127px;
-    }
+.bike-item img {
+  @include vp--1023 {
+    width: 270px;
+    height: 300px;
   }
+}
+
+.bike-item:first-child::before {
+  content: "";
+  background-image: url("../../img/desktop-round-icon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 146px;
+  left: 0;
+  z-index: -1;
+
+  @include vp--1023 {
+    width: 127px;
+    height: 127px;
+    top: 207px;
+    left: 21px;
+  }
+
+  @include vp--767 {
+    top: 204px;
+    left: 0px;
+    width: 127px;
+    height: 127px;
+  }
+}
 
 .bike-item:nth-child(2n) {
   padding-top: 30px;
@@ -108,8 +116,8 @@
     }
 
     @include vp--767 {
-      top: 30px;
-      left: 80%;
+      top: -18px;
+      left: 76%;
     }
   }
 }
