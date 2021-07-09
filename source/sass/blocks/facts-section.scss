@@ -1,21 +1,17 @@
 .facts-section {
+  margin: 0 auto;
+  width: 1160px;
   min-height: 504px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
   @include vp--1023 {
     align-items: flex-start;
     min-height: 476px;
-  }
-}
-
-.facts-section__wrapper {
-  width: 1160px;
-  margin: 0 auto;
-
-  @include vp--1023 {
     width: 768px;
     margin: 43px auto;
+    align-items: center;
   }
 
   @include vp--767 {

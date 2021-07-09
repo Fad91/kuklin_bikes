@@ -4,7 +4,7 @@
   width: 350px;
 
   @include vp--1023 {
-    margin-top: 37px;
+    margin: 0 auto;
   }
 
   @include vp--767 {
@@ -71,6 +71,7 @@
   border-radius: 6px;
   margin-top: 30px;
   margin-left: 22px;
+  cursor: pointer;
 
   @include vp--1023 {
     margin-top: 0;

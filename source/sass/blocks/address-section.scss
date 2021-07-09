@@ -17,7 +17,7 @@
   }
 }
 
-.address-section h5 {
+.address-section h2 {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
@@ -63,13 +63,19 @@
 }
 
 .address-section img {
+  width: 957px;
+  height: 530px;
+  border: none;
+  margin: auto;
+  display: block;
+
   @include vp--1023 {
     width: 698px;
     height: 545px;
   }
 
   @include vp--767 {
-    width: 320px;
+    width: 100%;
     height: 250px;
   }
 }

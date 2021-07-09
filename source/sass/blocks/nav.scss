@@ -4,7 +4,6 @@
   padding: 20px 13px 10px 13px;
   color: $color-opacity-07-white;
   border-bottom: 1px solid $color-opacity-02-white;
-  position: relative;
 
   @include vp--1023 {
     width: 767px;
@@ -34,6 +33,11 @@
   }
 }
 
+.nav__logo--no-js,
+.nav__logo--opened {
+  display: none;
+}
+
 .nav__logo a {
   @include vp--1023 {
     align-self: flex-end;
@@ -54,6 +58,7 @@
     background-color: $color-robins-egg-blue;
     border: none;
     position: relative;
+    z-index: 2;
   }
 
   &::before {
@@ -77,6 +82,7 @@
     position: relative;
     width: 50px;
     height: 50px;
+    background-color: transparent;
 
     &::before {
       content: "";

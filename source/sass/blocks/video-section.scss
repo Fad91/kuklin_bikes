@@ -98,16 +98,18 @@
   background-color: $color-robins-egg-blue;
   border-radius: 50%;
   border: none;
-  margin-top: -296px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
 
   @include vp--1023 {
-    margin-top: -190px;
     width: 90px;
     height: 90px;
   }
 
   @include vp--767 {
-    margin-top: -115px;
     width: 65px;
     height: 65px;
   }

@@ -18,13 +18,16 @@
 }
 
 .bike-item img {
+
+    border-radius: 10px;
+
   @include vp--1023 {
     width: 270px;
     height: 300px;
   }
 }
 
-.bike-item:first-child::before {
+.bike-item:nth-child(3n+1)::before {
   content: "";
   background-image: url("../../img/desktop-round-icon.svg");
   background-repeat: no-repeat;
@@ -51,7 +54,7 @@
   }
 }
 
-.bike-item:nth-child(2n) {
+.bike-item:nth-child(3n+2) {
   padding-top: 30px;
   padding-left: 25px;
 
@@ -93,7 +96,7 @@
   }
 }
 
-.bike-item:nth-child(3n) {
+.bike-item:nth-child(3n+3) {
   padding-left: 24px;
 
   &::before {
@@ -123,22 +126,9 @@
 }
 
 
-.bike-item h4 {
+.bike-item h2 {
   font-weight: 600;
   font-size: 22px;
   line-height: 34px;
   text-align: center;
-  margin-top: 18px;
-}
-
-.bike-item:nth-child(3n) h4 {
-  margin-top: 10px;
-
-  @include vp--1023 {
-    margin-top: 17px;
-  }
-}
-
-.bike-item img {
-  border-radius: 10px;
 }

@@ -1,17 +1,19 @@
 .main-menu {
   padding: 0 10px;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 1/3;
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
 
   @include vp--1023 {
-    flex-direction: column;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     background-color: $color-default-white;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 50px;
     position: absolute;
     width: 100%;
     z-index: 1;
@@ -23,6 +25,12 @@
   @include vp--1023 {
     display: none;
   }
+}
+
+.main-menu--opened {
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
 .main-menu li {
