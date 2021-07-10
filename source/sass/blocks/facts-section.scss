@@ -1,10 +1,7 @@
 .facts-section {
   margin: 0 auto;
-  width: 1160px;
-  min-height: 504px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 1440px;
+  padding: 150px 0;
 
   @include vp--1023 {
     align-items: flex-start;
@@ -25,7 +22,7 @@
   font-size: 30px;
   line-height: 30px;
   text-align: center;
-  margin: 7px 0px 28px;
+  margin: 0 0 42px 0;
 
   @include vp--1023 {
     font-weight: 600;

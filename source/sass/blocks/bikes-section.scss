@@ -3,10 +3,11 @@
 }
 
 .bikes-section__wrapper {
-  width: 1230px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
-  padding-top: 118px;
-  padding-bottom: 113px;
+  padding-top: 144px;
+  padding-bottom: 106px;
 
   @include vp--1023 {
     width: 768px;
@@ -28,6 +29,7 @@
   line-height: 30px;
   text-align: center;
   color: $color-nero;
+  margin: 0;
 
   @include vp--1023 {
     font-weight: 600;

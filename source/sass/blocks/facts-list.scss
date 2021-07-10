@@ -1,8 +1,11 @@
 .facts-list {
+  list-style: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0;
+  grid-gap: 45px;
+  padding: 0 140px;
 
   @include vp--1023 {
     grid-template-rows: repeat(2, 1fr);

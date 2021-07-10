@@ -1,10 +1,10 @@
 .address-section__wrapper {
-  width: 1000px;
+  max-width: 1160px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 105px;
+  padding-top: 146px;
 
   @include vp--1023 {
     width: 768px;
@@ -23,7 +23,7 @@
   line-height: 30px;
   color: $color-nero;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 0 0 15px 0;
 
   @include vp--1023 {
     font-weight: 600;
@@ -63,10 +63,7 @@
 }
 
 .address-section img {
-  width: 957px;
-  height: 530px;
-  border: none;
-  margin: auto;
+  margin: 0 auto;
   display: block;
 
   @include vp--1023 {

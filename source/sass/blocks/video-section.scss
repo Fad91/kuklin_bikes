@@ -1,7 +1,6 @@
 .video-section {
   background-image: $gradient-black-to-white;
   display: flex;
-  min-height: 803px;
   justify-content: center;
 
 
@@ -20,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 93px;
+  padding-top: 121px;
 
   @include vp--1023 {
     width: 768px;
@@ -33,14 +32,13 @@
   }
 }
 
-.video-section h4 {
+.video-section h2 {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
   color: $color-default-white;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 0;
+  margin: 0 0 20px 0;
 
   @include vp--1023 {
     font-weight: 600;
@@ -56,6 +54,7 @@
   text-align: center;
   color: $color-opacity-07-white;
   width: 340px;
+  margin: 0 0 54px 0;
 
   @include vp--1023 {
     width: 430px;
@@ -73,7 +72,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
 
   @include vp--1023 {
     margin-top: 27px;

@@ -1,6 +1,6 @@
 .fact-item {
   text-align: center;
-  padding: 10px;
+  padding: 8px;
 
   @include vp--1023 {
     margin-bottom: 10px;
@@ -17,8 +17,8 @@
   font-size: 28px;
   line-height: 38px;
   color: $color-robins-egg-blue;
-  margin-top: 13px;
-  margin-bottom: 18px;
+  display: block;
+  margin: 0 0 18px 0;
 
   @include vp--767 {
     margin-top: 13px;

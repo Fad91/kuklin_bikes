@@ -1,9 +1,9 @@
 .intro-block {
   min-height: 825px;
-  background-color: $color-nero;
+  background-color: $color-default-black;
   background-image: url("../img/desktop-bike-background.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: 1440px 825px;
 
   @include vp--1023 {
@@ -18,7 +18,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 200px 0;
+  padding: 310px 0 226px;
 
 
   @include vp--1023 {
