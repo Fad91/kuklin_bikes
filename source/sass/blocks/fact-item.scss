@@ -3,7 +3,7 @@
   padding: 8px;
 
   @include vp--1023 {
-    margin-bottom: 10px;
+    padding: 8px 10px 8px 8px;
   }
 
   @include vp--767 {

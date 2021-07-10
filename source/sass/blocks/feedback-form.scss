@@ -5,6 +5,8 @@
   padding: 13px 0px 13px 0;
 
   @include vp--1023 {
+    padding: 70px 12px 28px 12px;
+    width: 350px;
     margin: 0 auto;
   }
 
@@ -24,11 +26,11 @@
   letter-spacing: .3px;
 
   @include vp--1023 {
+    margin: 0 0 32px 0;
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
     color: $color-default-black;
-    padding: 30px 6px 30px 10px;
   }
 
   @include vp--767 {
@@ -44,8 +46,7 @@
   margin-bottom: 20px;
 
   @include vp--1023 {
-    width: 320px;
-    margin: 0 16px 20px;
+    width: 321px;
     padding: 11px 10px 11px 20px;
     font-weight: 400;
     font-size: 15px;
@@ -73,7 +74,6 @@
 
   @include vp--1023 {
     margin-top: 0;
-    margin-left: 15px;
     width: 323px;
   }
 

@@ -5,9 +5,8 @@
 
   @include vp--1023 {
     align-items: flex-start;
-    min-height: 476px;
-    width: 768px;
-    margin: 43px auto;
+    max-width: 768px;
+    padding: 36px 0 64px 0;
     align-items: center;
   }
 
@@ -28,7 +27,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 41px;
-    margin: 7px 0 7px;
+    margin: 0 0 21px 0;
   }
 
   @include vp--767 {

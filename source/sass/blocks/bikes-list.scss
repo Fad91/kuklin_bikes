@@ -9,9 +9,11 @@
   padding: 48px 120px 20px 120px;
 
   @include vp--1023 {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 29px 50px 0 27px;
+    padding: 20px 85px;
+    row-gap: 25px;
   }
 
   @include vp--767 {

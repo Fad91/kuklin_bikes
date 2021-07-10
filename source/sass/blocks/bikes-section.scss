@@ -10,9 +10,9 @@
   padding-bottom: 106px;
 
   @include vp--1023 {
-    width: 768px;
+    max-width: 768px;
     margin: 0 auto;
-    padding-top: 25px;
+    padding-top: 50px;
     padding-bottom: 20px;
   }
 
