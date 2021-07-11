@@ -7,3 +7,10 @@
     width: 100%;
   }
 }
+
+.header--nojs {
+  @include vp--1023 {
+    position: static;
+    transform: none;
+  }
+}

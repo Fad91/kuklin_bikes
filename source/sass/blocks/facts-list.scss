@@ -16,6 +16,8 @@
   }
 
   @include vp--767 {
+    grid-template-columns: 1fr;
+    grid-row-gap: 19px;
     padding: 0;
   }
 }

@@ -7,8 +7,7 @@
   }
 
   @include vp--767 {
-    margin-bottom: 25px;
-    padding: 0;
+    padding: 10px 15px;
   }
 }
 
@@ -21,8 +20,7 @@
   margin: 0 0 18px 0;
 
   @include vp--767 {
-    margin-top: 13px;
-    margin-bottom: 15px;
+    margin: 0 0 14px 0;
   }
 }
 

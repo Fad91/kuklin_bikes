@@ -11,8 +11,8 @@
   }
 
   @include vp--767 {
-    width: 320px;
-    margin-bottom: 10px;
+    // width: 320px;
+    // margin-bottom: 10px;
   }
 }
 
@@ -31,11 +31,14 @@
 .bike-item:nth-child(3n+1) {
   padding-top: 10px;
 
+  @include vp--767 {
+    padding: 0;
+  }
+
   &::before {
     content: "";
-    background-image: url("../../img/desktop-round-icon.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    border: 18px solid $color-robins-egg-blue;
+    border-radius: 50%;
     width: 170px;
     height: 170px;
     position: absolute;
@@ -44,17 +47,20 @@
     z-index: -1;
 
     @include vp--1023 {
-      width: 127px;
-      height: 127px;
-      top: 207px;
-      left: 21px;
+      width: 121px;
+      height: 121px;
+      top: 216px;
+      left: -34px;
     }
 
     @include vp--767 {
       top: 204px;
-      left: 0px;
+      left: -24px;
       width: 127px;
       height: 127px;
+      background: none;
+      border: 18px solid $color-robins-egg-blue;
+      border-radius: 50%;
     }
   }
 }
@@ -64,6 +70,10 @@
 
   @include vp--1023 {
     padding-top: 10px;
+  }
+
+  @include vp--767 {
+    padding: 0;
   }
 
   &::before {
@@ -103,7 +113,7 @@
 .bike-item:nth-child(3n+3) {
 
   &::before {
-    // content: "";
+    content: "";
     background-image: url("../../img/desktop-round-icon.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,12 +128,12 @@
       width: 68px;
       height: 68px;
       top: -20px;
-      left: 80%;
+      right: -24px;
     }
 
     @include vp--767 {
-      top: -18px;
-      left: 76%;
+      top: -23px;
+      right: -17px;
     }
   }
 }

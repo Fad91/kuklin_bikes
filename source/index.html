@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Велосипеды 2.0</title>
+  <meta name="keywords" content="велосипеды, продажа велосипедов, аксессуары для велосипедов">
+  <meta name="description" content="магазин по продаже велосипедов">
+  <title>Moon-магазин велосипедов</title>
   <link rel="preload" href="fonts/open-sans-v20-latin-300.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/open-sans-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/open-sans-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin>
@@ -12,55 +14,53 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-  <div class="intro">
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__logo">
-          <a>
-            <img src="img/desktop-logo-icon.svg" width="67" height="20" alt="Компания Moon">
-          </a>
-          <button class="nav__button nav__button--nojs nav__button--closed">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div>
-        <ul class="main-menu">
-          <li class="main-menu__item">
-            <a href="#about">О нас</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#bikes">Виды велосипедов</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#video">Видео про велосипеды</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#address">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="intro-block">
-      <div class="intro-block__wrapper">
-        <section class="text-block">
-          <a>
-            <img src="img/desktop-logo-icon.svg" width="67" height="20" alt="Компания Moon">
-          </a>
-          <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
-          <h2>Мы продаем велосипеды</h2>
-          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
-        </section>
-        <section class="feedback-form">
-          <form action="#">
-            <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
-            <input type="text" name="name" id="name" placeholder="Введите Ваше Имя" required>
-            <label for="name" class="visually-hidden">Ваше имя</label>
-            <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
-            <label for="tel" class="visually-hidden">Ваш телефон</label>
-            <button type="submit" aria-label="Отправить данные">Подобрать велосипед мечты</button>
-          </form>
-        </section>
+<body class="page-body">
+  <header class="header header--nojs">
+    <nav class="nav">
+      <div class="nav__logo nav__logo--nojs">
+        <a>
+          <img src="img/desktop-logo-icon.svg" width="67" height="20" alt="Компания Moon">
+        </a>
+        <button class="nav__button nav__button--nojs nav__button--closed">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
+      <ul class="main-menu main-menu--nojs">
+        <li class="main-menu__item">
+          <a href="#about">О нас</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="#bikes">Виды велосипедов</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="#video">Видео про велосипеды</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="#address">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="intro-block">
+    <div class="intro-block__wrapper">
+      <section class="text-block">
+        <a>
+          <img src="img/desktop-logo-icon.svg" width="67" height="20" alt="Компания Moon">
+        </a>
+        <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
+        <h2>Мы продаем велосипеды</h2>
+        <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </section>
+      <section class="feedback-form">
+        <form action="https://echo.htmlacademy.ru/" method="POST">
+          <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
+          <input type="text" name="name" id="name" placeholder="Введите Ваше Имя" required>
+          <label for="name" class="visually-hidden">Ваше имя</label>
+          <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
+          <label for="tel" class="visually-hidden">Ваш телефон</label>
+          <button type="submit" aria-label="Отправить данные">Подобрать велосипед мечты</button>
+        </form>
+      </section>
     </div>
   </div>
 
@@ -175,7 +175,7 @@
               srcset="img/mobile-video-bike-image@2x.jpg 2x" alt="Видео про велосипеды">
           </picture>
           <button type="button" aria-label="Воспроизвести видео">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18" viewBox="0 0 13 18" fill="none">
               <use xlink:href="img/sprite_auto.svg#icon-play"></use>
             </svg>
           </button>

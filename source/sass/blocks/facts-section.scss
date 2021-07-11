@@ -12,7 +12,7 @@
 
   @include vp--767 {
     width: 320px;
-    margin: 43px auto 55px;
+    padding: 42px 0 72px 0;
   }
 }
 
@@ -31,6 +31,6 @@
   }
 
   @include vp--767 {
-    margin: 9px 0 19px;
+
   }
 }

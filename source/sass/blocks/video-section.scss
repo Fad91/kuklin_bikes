@@ -6,11 +6,11 @@
 
   @include vp--1023 {
     align-items: flex-start;
-    min-height: 468px;
+    background-image: $gradient-black-to-white-tablet;
   }
 
   @include vp--767 {
-    min-height: 437px;
+    background-image: $gradient-black-to-white;
   }
 }
 
@@ -23,12 +23,12 @@
 
   @include vp--1023 {
     width: 768px;
-    margin-top: 38px;
+    padding-top: 71px;
   }
 
   @include vp--767 {
     width: 320px;
-    margin-top: 55px;
+    padding-top: 83px;
   }
 }
 
@@ -58,12 +58,12 @@
 
   @include vp--1023 {
     width: 430px;
-    margin-top: 20px;
+    margin: 0 0 39px 0;
   }
 
   @include vp--767 {
     width: 300px;
-    margin-bottom: 24px;
+    margin: 0 0 54px 0;
   }
 }
 
@@ -74,7 +74,7 @@
   align-items: center;
 
   @include vp--1023 {
-    margin-top: 27px;
+    margin: 0;
   }
 }
 
@@ -99,7 +99,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 
   @include vp--1023 {
@@ -122,8 +122,19 @@
 }
 
 .video-section__item svg {
+
+  @include vp--1023 {
+    width: 18px;
+    height: 30px;
+    transform: translate(4px, 0)
+  }
+
   @include vp--767 {
-    margin-top: 2px;
-    margin-left: 5px;
+    width: 13px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
