@@ -60,17 +60,24 @@
   }
 }
 
-.address-section img {
+.address-section__map {
+  width: 957px;
   margin: 0 auto;
-  display: block;
 
   @include vp--1023 {
     width: 698px;
-    height: 545px;
   }
 
   @include vp--767 {
     width: 100%;
     height: 250px;
+  }
+}
+
+.address-section__map img {
+  @include vp--767 {
+    height: 250px;
+    background-color: $color-white-smoke;
+    object-fit: cover;
   }
 }

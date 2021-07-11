@@ -1,45 +1,16 @@
 .intro {
-  // background-image: url("../img/desktop-bike-background.jpg");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-color: $color-nero;
-  // min-height: 825px;
-  // display: grid;
-  // grid-template-rows: min-content 1fr;
-  // grid-template-columns: repeat(2, 1fr);
+  background-image: url("../img/desktop-bike-background.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: $color-bunker;
+  background-size: 1440px 825px;
 
-  // @include retina {
-  //   background-image: url("../img/desktop-bike-background@2x.jpg");
-  //   background-repeat: no-repeat;
-  //   background-position: top center;
-  //   background-color: $color-default-black;
-  //   background-size: contain;
-  // }
-
-  @include vp--1023 {
-    // min-height: 340px;
-    // background-image: url("../img/tablet-bike-background.jpg");
-    // background-position: top center;
-    // background-color: $color-default-black;
-    // background-size: cover;
-
-
-    // @include retina {
-    //   background-image: url("../img/tablet-bike-background@2x.jpg");
-    //   background-repeat: no-repeat;
-    //   background-position: top center;
-    //   background-color: $color-default-black;
-    //   background-size: contain;
-    // }
+  @include retina {
+    background-image: url("../img/desktop-bike-background@2x.jpg");
   }
 
-  @include vp--767 {
-    // min-height: 390px;
-    // background-image: url("../img/mobile-bike-background.jpg");
-
-
-    // @include retina {
-    //   background-image: url("../img/mobile-bike-background@2x.jpg");
-    // }
+  @include vp--1023 {
+    background-image: none;
+    background-color: transparent;
   }
 }

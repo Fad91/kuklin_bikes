@@ -37,7 +37,7 @@
   }
 }
 
-.nav__logo a {
+.nav__link {
   @include vp--1023 {
     align-self: flex-end;
   }
@@ -54,6 +54,7 @@
     border: none;
     position: relative;
     z-index: 2;
+    cursor: pointer;
   }
 
   &::before {
@@ -83,21 +84,22 @@
       content: "";
       width: 2px;
       height: 32px;
-      background-color: $color-default-black;
+      background-color: $color-opacity-02-black-russian;
       border: none;
       padding: 0;
       display: block;
       transform: rotate(-45deg);
       position: absolute;
-      top: 10px;
+      top: 7px;
       left: 25px;
+      box-shadow: none;
     }
 
     &::after {
       content: "";
       width: 2px;
-      height: 40px;
-      background-color: $color-default-black;
+      height: 32px;
+      background-color: $color-opacity-02-black-russian;
       border: none;
       padding: 0;
       display: block;

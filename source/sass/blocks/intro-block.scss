@@ -1,27 +1,10 @@
-.intro-block {
-  background-color: $color-default-black;
-  background-image: url("../img/desktop-bike-background.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% 825px;
-
-  @include retina {
-    background-image: url("../img/desktop-bike-background@2x.jpg");
-  }
-
-  @include vp--1023 {
-    background-image: none;
-    background-color: transparent;
-  }
-}
-
 
 .intro-block__wrapper {
   width: 880px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 310px 0 226px;
+  padding: 310px 0 166px;
 
 
   @include vp--1023 {

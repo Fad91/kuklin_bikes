@@ -19,8 +19,13 @@
 
   @include vp--767 {
     width: 100%;
-    background-image: url("../img/mobile-bike-background.jpg");
+    background-image: url("../img/desktop-bike-background.jpg");
     padding: 121px 0 69px;
+    background-size: auto 390px;
+
+    @include retina {
+      background-image: url("../img/desktop-bike-background@2x.jpg");
+    }
   }
 }
 

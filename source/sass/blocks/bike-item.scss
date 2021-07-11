@@ -17,10 +17,8 @@
 }
 
 .bike-item img {
-  display: block;
   border-radius: 10px;
-  max-width: 100%;
-  height: auto;
+  background-color: $color-nero;
 
   @include vp--1023 {
     width: 270px;
@@ -37,7 +35,7 @@
 
   &::before {
     content: "";
-    border: 18px solid $color-robins-egg-blue;
+    border: 27px solid $color-robins-egg-blue;
     border-radius: 50%;
     width: 170px;
     height: 170px;
@@ -100,7 +98,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    bottom: 55px;
+    bottom: 30px;
     right: -21px;
 
 
@@ -139,14 +137,20 @@
 }
 
 
-.bike-item h3 {
+.bike-item__title {
   font-weight: 600;
   font-size: 22px;
   line-height: 34px;
   text-align: center;
+  margin: 10px 0 0 0;
 }
 
-.bike-item a {
+.bike-item__link {
   display: block;
   color: inherit;
+
+  &:hover {
+    transform: scale(1.02);
+    color: $color-robins-egg-blue;
+  }
 }
