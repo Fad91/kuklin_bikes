@@ -43,6 +43,12 @@
   }
 }
 
+.nav__link svg:hover {
+  opacity: 0.7;
+  stroke: $color-opacity-07-white;
+  transition: $transition-05-all;
+}
+
 .nav__button {
   display: none;
 
@@ -67,10 +73,14 @@
     left: 14px;
     box-shadow: 0 5px 0 0, 0 -5px 0 0;
   }
+
+  &:hover {
+    background-color: $color-opacity-07-white;
+    transition: $transition-05-all;
+  }
 }
 
 .nav__button--open {
-
   @include vp--1023 {
     border: none;
     padding: 0;

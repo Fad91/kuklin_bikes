@@ -3,22 +3,22 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  padding: 40px 128px 35px 117px;
+  padding: 36px 128px 35px 117px;
 
   @include vp--1023 {
     width: 768px;
-    padding: 20px 72px 27px 62px;
+    padding: 17px 72px 27px 62px;
   }
 
   @include vp--767 {
     width: 320px;
     flex-direction: column;
-    padding: 27px 20px 5px 26px;
+    padding: 30px 20px 5px 26px;
     align-items: center;
   }
 }
 
-.links a {
+.links__link {
   color: $color-opacity-05-black;
   display: flex;
 
@@ -30,6 +30,7 @@
 
   &:hover {
     color: $color-robins-egg-blue;
+    transition: $transition-05-all;
   }
 
   &:active {
@@ -44,6 +45,6 @@
   }
 }
 
-.links svg {
+.links__link svg {
   margin-right: 14px;
 }

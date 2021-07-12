@@ -32,7 +32,7 @@
   }
 }
 
-.video-section h2 {
+.video-section__title {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
@@ -47,7 +47,7 @@
   }
 }
 
-.video-section p {
+.video-section__content {
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
@@ -113,20 +113,20 @@
   }
 
   &:hover {
-    box-shadow: 0px 0px 1px 4px $color-opacity-02-white;
+    box-shadow: 0 0 3px 5px $color-opacity-02-white;
+    transition: $transition-05-all;
   }
 
   &:active {
-    box-shadow: 0px 0px 4px 1px $color-default-white;
+    box-shadow: none;
   }
 }
 
 .video-section__item svg {
-
   @include vp--1023 {
     width: 18px;
     height: 30px;
-    transform: translate(4px, 0)
+    transform: translate(4px, 0);
   }
 
   @include vp--767 {

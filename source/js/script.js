@@ -10,6 +10,7 @@ const phoneInput = document.querySelector("#tel");
 const header = document.querySelector(".header");
 const navLogo = document.querySelector(".nav__logo");
 const pageMain = document.querySelector(".main");
+const form = document.querySelector(".feedback-form");
 const moveTo = new MoveTo();
 
 // Enable JS - добавление/удаление классов при включенном JS
@@ -26,7 +27,8 @@ navButton.addEventListener("click", function () {
   mainMenu.classList.toggle("main-menu--closed");
   mainMenu.classList.toggle("main-menu--opened");
   navButton.classList.toggle("nav__button--open");
-  pageMain.classList.add("visually-hidden");
+  pageMain.classList.toggle("visually-hidden");
+  form.classList.toggle("visually-hidden");
 });
 
 // Blocking-scroll - блокировка скролла при открытии меню
@@ -39,6 +41,7 @@ for (let menuLink of menuLinks) {
     mainMenu.classList.remove("main-menu--opened");
     mainMenu.classList.add("main-menu--closed");
     navButton.classList.remove("nav__button--open");
+    form.classList.remove("visually-hidden");
   });
 }
 
@@ -53,7 +56,7 @@ nameInput.addEventListener("blur", function () {
 });
 
 phoneInput.addEventListener("focus", function () {
-  phoneInput.placeholder = "Поле должно состоять из цифр";
+  phoneInput.placeholder = "+7XXXXXXXXXX";
 });
 
 phoneInput.addEventListener("blur", function () {

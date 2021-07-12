@@ -43,6 +43,9 @@
   cursor: pointer;
 
   @include vp--1023 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
     background-color: $color-white-smoke;
     padding: 0 10px;
     margin-bottom: 30px;
@@ -53,13 +56,16 @@
   color: inherit;
 
   @include vp--1023 {
-    display: block;
     padding: 14px 0;
     color: $color-tuna;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &:hover {
     color: $color-default-white;
+    transition: $transition-05-all;
 
     @include vp--1023 {
       color: $color-default-black;
@@ -69,5 +75,19 @@
 
   &:active {
     color: $color-robins-egg-blue;
+  }
+}
+
+.main-menu__link svg {
+  display: none;
+
+  @include vp--1023 {
+    display: block;
+  }
+
+  &:hover {
+    transition: $transition-05-all;
+    transform: rotate(90deg);
+    stroke: $color-default-black;
   }
 }

@@ -29,7 +29,7 @@
   }
 }
 
-.text-block h2 {
+.text-block__title {
   color: $color-default-white;
   font-weight: 700;
   font-size: 46px;
@@ -50,7 +50,7 @@
   }
 }
 
-.text-block p {
+.text-block__content {
   color: $color-opacity-08-white;
   font-weight: 300;
   font-size: 20px;
@@ -73,12 +73,21 @@
   }
 }
 
-.text-block a {
+.text-block__link {
   cursor: pointer;
   display: block;
   margin-bottom: 24px;
 
   @include vp--1023 {
     display: none;
+  }
+
+  &:hover {
+    transition: $transition-05-all;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
   }
 }

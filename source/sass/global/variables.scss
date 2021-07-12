@@ -34,9 +34,13 @@ $gradient-black-to-white-tablet: linear-gradient(to bottom, $color-black-russian
 
 // Typography
 
-$font-family-open-sans: 'Open Sans', 'Arial', sans-serif;
+$font-family-open-sans: "Open Sans", "Arial", sans-serif;
 
 // Retina
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Transition
+
+$transition-05-all: all 0.5s ease;
