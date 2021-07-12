@@ -11,6 +11,7 @@ var header = document.querySelector('.header');
 var navLogo = document.querySelector('.nav__logo');
 var pageMain = document.querySelector('.main');
 var form = document.querySelector('.feedback-form');
+// eslint-disable-next-line no-undef
 var moveTo = new MoveTo();
 
 // Enable JS - добавление/удаление классов при включенном JS
@@ -64,7 +65,7 @@ phoneInput.addEventListener('blur', function () {
 
 // Smooth scroll - плавный скролл
 
-var triggers = document.getElementsByClassName('js-trigger');
+var triggers = Array.from(document.getElementsByClassName('js-trigger'));
 
 triggers.forEach(function (trigger) {
   moveTo.registerTrigger(trigger);
