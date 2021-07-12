@@ -6,8 +6,6 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "^0.4.2",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -22,7 +20,9 @@
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -50,8 +50,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "body-scroll-lock": "^4.0.0-beta.0",
-    "csscomb": "^4.3.0",
     "del": "^4.1.1",
     "moveto": "^1.8.2"
   }
