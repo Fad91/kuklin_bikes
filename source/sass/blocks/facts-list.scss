@@ -2,9 +2,11 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-  margin: 0;
-  padding: 0 140px;
+  grid-gap: 18px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1185px;
 
   @include vp--1023 {
     grid-template-rows: repeat(2, 1fr);
@@ -12,6 +14,7 @@
     grid-column-gap: 28px;
     grid-row-gap: 25px;
     padding: 0 100px;
+    max-width: 768px;
   }
 
   @include vp--767 {

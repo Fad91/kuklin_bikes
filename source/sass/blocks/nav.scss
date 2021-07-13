@@ -11,10 +11,6 @@
     border: none;
     width: 100%;
   }
-
-  @include vp--767 {
-    width: 100%;
-  }
 }
 
 .nav__logo {
@@ -90,21 +86,7 @@
     height: 50px;
     background-color: transparent;
 
-    &::before {
-      content: "";
-      width: 2px;
-      height: 32px;
-      background-color: $color-opacity-02-black-russian;
-      border: none;
-      padding: 0;
-      display: block;
-      transform: rotate(-45deg);
-      position: absolute;
-      top: 7px;
-      left: 25px;
-      box-shadow: none;
-    }
-
+    &::before,
     &::after {
       content: "";
       width: 2px;
@@ -113,8 +95,18 @@
       border: none;
       padding: 0;
       display: block;
-      transform: rotate(45deg);
       position: absolute;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 7px;
+      left: 25px;
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(45deg);
       top: 6px;
       left: 24px;
     }

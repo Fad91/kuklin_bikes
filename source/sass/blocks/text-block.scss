@@ -38,7 +38,6 @@
   letter-spacing: 1px;
 
   @include vp--1023 {
-    font-weight: 700;
     font-size: 30px;
     line-height: 42px;
     margin: 0 0 22px 0;
@@ -58,9 +57,7 @@
   margin: 0;
 
   @include vp--1023 {
-    font-weight: 300;
     font-size: 18px;
-    line-height: 32px;
     text-align: center;
     margin: 0 auto;
     width: 440px;
@@ -80,14 +77,5 @@
 
   @include vp--1023 {
     display: none;
-  }
-
-  &:hover {
-    transition: $transition-05-all;
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 1;
   }
 }

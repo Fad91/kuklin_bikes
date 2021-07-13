@@ -64,44 +64,34 @@
     padding: 0;
   }
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     width: 47px;
     height: 47px;
-    background-image: url("../../img/desktop-square-icon.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../img/desktop-square-icon.svg");
     position: absolute;
-    top: 21px;
-    left: -17px;
 
     @include vp--1023 {
       display: none;
     }
   }
 
+  &::before {
+    top: 21px;
+    left: -17px;
+  }
+
   &::after {
-    content: "";
-    width: 47px;
-    height: 47px;
-    background-image: url("../../img/desktop-square-icon.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
     bottom: 30px;
     right: -21px;
-
-
-    @include vp--1023 {
-      display: none;
-    }
   }
 }
 
 .bike-item:nth-child(3n+3) {
   &::before {
     content: "";
-    background-image: url("../../img/desktop-round-icon.svg");
+    background-image: url("../img/desktop-round-icon.svg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 95px;

@@ -66,7 +66,7 @@ phoneInput.addEventListener('blur', function () {
 // Smooth scroll - плавный скролл
 
 var triggers = Array.from(document.getElementsByClassName('js-trigger'));
-console.log(triggers)
+
 triggers.forEach(function (trigger) {
   moveTo.registerTrigger(trigger);
 });

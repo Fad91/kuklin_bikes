@@ -28,9 +28,7 @@
 
   @include vp--1023 {
     margin: 0 0 29px 0;
-    font-weight: 600;
     font-size: 18px;
-    line-height: 28px;
     color: $color-default-black;
   }
 
@@ -60,6 +58,12 @@
     padding: 12px 10px 11px 27px;
     margin-bottom: 18px;
   }
+
+  &:hover {
+    border: 1px solid $color-robins-egg-blue;
+    box-shadow: 0 0 2px 3px $color-link-water;
+    transition: $transition-05-all;
+  }
 }
 
 .feedback-form input::placeholder {
@@ -82,14 +86,12 @@
   cursor: pointer;
 
   @include vp--1023 {
-    margin-top: 0;
     width: 323px;
   }
 
   @include vp--767 {
     width: 288px;
     padding: 13px 28px;
-    margin-left: 0;
   }
 
   &:hover {

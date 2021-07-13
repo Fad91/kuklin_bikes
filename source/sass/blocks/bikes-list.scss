@@ -1,12 +1,12 @@
 .bikes-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, max-content));
+  grid-template-columns: repeat(3, minmax(230px, max-content));
   margin: 0;
   grid-gap: 50px;
   justify-content: center;
   width: 100%;
-  padding: 48px 120px 20px 120px;
+  padding: 48px 108px 20px 108px;
 
   @include vp--1023 {
     display: flex;
