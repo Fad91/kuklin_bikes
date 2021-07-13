@@ -61,11 +61,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: $transition-05-color;
   }
 
   &:hover {
     color: $color-default-white;
-    transition: $transition-05-all;
+    transition: $transition-05-color;
 
     @include vp--1023 {
       color: $color-default-black;
@@ -83,10 +84,11 @@
 
   @include vp--1023 {
     display: block;
+    transition: $transition-rotate-and-stroke-color;
   }
 
   &:hover {
-    transition: $transition-05-all;
+    transition: $transition-rotate-and-stroke-color;
     transform: rotate(90deg);
     stroke: $color-default-black;
   }

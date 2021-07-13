@@ -21,6 +21,7 @@
 .links__link {
   color: $color-opacity-05-black;
   display: flex;
+  transition: $transition-05-color;
 
   @include vp--767 {
     align-items: center;
@@ -29,7 +30,7 @@
 
   &:hover {
     color: $color-robins-egg-blue;
-    transition: $transition-05-all;
+    transition: $transition-05-color;
   }
 
   &:active {

@@ -44,6 +44,7 @@
   border: 1px solid $color-link-water;
   border-radius: 6px;
   margin-bottom: 20px;
+  transition: $transition-border-and-box-shadow;
 
   @include vp--1023 {
     width: 323px;
@@ -62,7 +63,7 @@
   &:hover {
     border: 1px solid $color-robins-egg-blue;
     box-shadow: 0 0 2px 3px $color-link-water;
-    transition: $transition-05-all;
+    transition: $transition-border-and-box-shadow;
   }
 }
 
@@ -84,6 +85,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: $transition-color-text-decoration-shadow;
 
   @include vp--1023 {
     width: 323px;
@@ -98,7 +100,7 @@
     color: $color-opacity-05-black;
     text-decoration: underline;
     box-shadow: 0 0 5px 2px $color-link-water;
-    transition: $transition-05-all;
+    transition: $transition-color-text-decoration-shadow;
   }
 
   &:active {

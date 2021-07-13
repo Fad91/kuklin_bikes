@@ -3,16 +3,13 @@
 //  Variables - переменные
 
 var mainMenu = document.querySelector('.main-menu');
-var menuLinks = Array.from(document.querySelectorAll('.main-menu__item a'));
+var menuLinks = Array.prototype.slice.call(document.querySelectorAll('.main-menu__link'));
 var navButton = document.querySelector('.nav__button');
-var nameInput = document.querySelector('#name');
 var phoneInput = document.querySelector('#tel');
 var header = document.querySelector('.header');
 var navLogo = document.querySelector('.nav__logo');
 var pageMain = document.querySelector('.main');
 var form = document.querySelector('.feedback-form');
-// eslint-disable-next-line no-undef
-var moveTo = new MoveTo();
 
 // Enable JS - добавление/удаление классов при включенном JS
 
@@ -24,12 +21,16 @@ navLogo.classList.remove('nav__logo--nojs');
 
 // Navigation - обработка событии с кнопкой навигации
 
-navButton.addEventListener('click', function () {
+var showMenu = function () {
   mainMenu.classList.toggle('main-menu--closed');
   mainMenu.classList.toggle('main-menu--opened');
   navButton.classList.toggle('nav__button--open');
   pageMain.classList.toggle('visually-hidden');
   form.classList.toggle('visually-hidden');
+};
+
+navButton.addEventListener('click', function () {
+  showMenu();
 });
 
 // Blocking-scroll - блокировка скролла при открытии меню
@@ -47,14 +48,6 @@ menuLinks.forEach(function (menuLink) {
 });
 // Изменение placeholder при фокусе и отмене фокуса
 
-nameInput.addEventListener('focus', function () {
-  nameInput.placeholder = '';
-});
-
-nameInput.addEventListener('blur', function () {
-  nameInput.placeholder = 'Введите Ваше Имя';
-});
-
 phoneInput.addEventListener('focus', function () {
   phoneInput.placeholder = '+7XXXXXXXXXX';
 });
@@ -65,7 +58,12 @@ phoneInput.addEventListener('blur', function () {
 
 // Smooth scroll - плавный скролл
 
-var triggers = Array.from(document.getElementsByClassName('js-trigger'));
+// eslint-disable-next-line no-undef
+var moveTo = new MoveTo({
+  duration: 1200,
+});
+
+var triggers = Array.prototype.slice.call(document.querySelectorAll('.js-trigger'));
 
 triggers.forEach(function (trigger) {
   moveTo.registerTrigger(trigger);

@@ -99,6 +99,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: $transition-05-box-shadow;
 
   @include vp--1023 {
     width: 90px;
@@ -112,7 +113,7 @@
 
   &:hover {
     box-shadow: 0 0 3px 5px $color-opacity-02-white;
-    transition: $transition-05-all;
+    transition: $transition-05-box-shadow;
   }
 
   &:active {

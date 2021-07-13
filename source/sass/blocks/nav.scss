@@ -39,12 +39,6 @@
   }
 }
 
-.nav__link svg:hover {
-  opacity: 0.7;
-  stroke: $color-opacity-07-white;
-  transition: $transition-05-all;
-}
-
 .nav__button {
   display: none;
 
@@ -57,13 +51,14 @@
     position: relative;
     z-index: 2;
     cursor: pointer;
+    transition: $transition-08-bg-color;
   }
 
   &::before {
     content: "";
     width: 23px;
     height: 1px;
-    background: $color-default-black;
+    background-color: $color-default-black;
     position: absolute;
     top: 25px;
     left: 14px;
@@ -72,7 +67,7 @@
 
   &:hover {
     background-color: $color-opacity-07-white;
-    transition: $transition-05-all;
+    transition: $transition-08-bg-color;
   }
 }
 

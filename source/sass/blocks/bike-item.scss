@@ -135,10 +135,11 @@
 .bike-item__link {
   display: block;
   color: inherit;
+  transition: $transition-05-scale;
 
   &:hover {
     transform: scale(1.02);
     color: $color-robins-egg-blue;
-    transition: $transition-05-all;
+    transition: $transition-05-scale;
   }
 }
