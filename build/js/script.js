@@ -5,9 +5,11 @@
 var mainMenu = document.querySelector('.main-menu');
 var navButton = document.querySelector('.nav__button');
 var menuLinks = document.querySelectorAll('.main-menu__link');
+var nameInput = document.querySelector('#name');
 var phoneInput = document.querySelector('#tel');
 var header = document.querySelector('.header');
 var navLogo = document.querySelector('.nav__logo');
+var feedbackForm = document.querySelector('.feedback-form form');
 var menuOpened = false;
 
 // Enable JS - добавление/удаление классов при включенном JS
@@ -74,3 +76,10 @@ var triggers = document.querySelectorAll('.js-trigger');
 triggers.forEach(function (trigger) {
   moveTo.registerTrigger(trigger);
 });
+
+
+feedbackForm.addEventListener('submit', function () {
+  localStorage.setItem('Имя', nameInput.value);
+  localStorage.setItem('Телефон', phoneInput.value);
+});
+
