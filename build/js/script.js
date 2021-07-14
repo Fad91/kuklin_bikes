@@ -48,7 +48,6 @@ navButton.addEventListener('click', function () {
 
 menuLinks.forEach(function (menuLink) {
   menuLink.addEventListener('click', function () {
-  // eslint-disable-next-line no-undef
     hideMenu();
   });
 });
