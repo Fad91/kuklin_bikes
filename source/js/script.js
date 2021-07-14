@@ -3,13 +3,12 @@
 //  Variables - переменные
 
 var mainMenu = document.querySelector('.main-menu');
-var menuLinks = Array.prototype.slice.call(document.querySelectorAll('.main-menu__link'));
 var navButton = document.querySelector('.nav__button');
+var menuLinks = document.querySelectorAll('.main-menu__link');
 var phoneInput = document.querySelector('#tel');
 var header = document.querySelector('.header');
 var navLogo = document.querySelector('.nav__logo');
-var pageMain = document.querySelector('.main');
-var form = document.querySelector('.feedback-form');
+var menuOpened = false;
 
 // Enable JS - добавление/удаление классов при включенном JS
 
@@ -19,33 +18,40 @@ mainMenu.classList.add('main-menu--closed');
 navButton.classList.remove('nav__button--nojs');
 navLogo.classList.remove('nav__logo--nojs');
 
-// Navigation - обработка событии с кнопкой навигации
+// Navigation - обработка событии с кнопкой навигации и блокировка скролла
 
 var showMenu = function () {
-  mainMenu.classList.toggle('main-menu--closed');
-  mainMenu.classList.toggle('main-menu--opened');
-  navButton.classList.toggle('nav__button--open');
-  pageMain.classList.toggle('visually-hidden');
-  form.classList.toggle('visually-hidden');
+  mainMenu.classList.remove('main-menu--closed');
+  mainMenu.classList.add('main-menu--opened');
+  navButton.classList.add('nav__button--open');
+  // eslint-disable-next-line no-undef
+  bodyScrollLock.disableBodyScroll(mainMenu);
+  menuOpened = true;
+};
+
+var hideMenu = function () {
+  mainMenu.classList.add('main-menu--closed');
+  mainMenu.classList.remove('main-menu--opened');
+  navButton.classList.remove('nav__button--open');
+  // eslint-disable-next-line no-undef
+  bodyScrollLock.enableBodyScroll(mainMenu);
+  menuOpened = false;
 };
 
 navButton.addEventListener('click', function () {
-  showMenu();
+  if (menuOpened) {
+    hideMenu();
+  } else {
+    showMenu();
+  }
 });
-
-// Blocking-scroll - блокировка скролла при открытии меню
 
 menuLinks.forEach(function (menuLink) {
   menuLink.addEventListener('click', function () {
-    if (pageMain.classList.contains('visually-hidden')) {
-      pageMain.classList.remove('visually-hidden');
-    }
-    mainMenu.classList.remove('main-menu--opened');
-    mainMenu.classList.add('main-menu--closed');
-    navButton.classList.remove('nav__button--open');
-    form.classList.remove('visually-hidden');
+    hideMenu();
   });
 });
+
 // Изменение placeholder при фокусе и отмене фокуса
 
 phoneInput.addEventListener('focus', function () {
@@ -63,7 +69,7 @@ var moveTo = new MoveTo({
   duration: 1200,
 });
 
-var triggers = Array.prototype.slice.call(document.querySelectorAll('.js-trigger'));
+var triggers = document.querySelectorAll('.js-trigger');
 
 triggers.forEach(function (trigger) {
   moveTo.registerTrigger(trigger);

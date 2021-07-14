@@ -50,6 +50,7 @@
     "node": "8.15"
   },
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
     "del": "^4.1.1",
     "moveto": "^1.8.2"
   }
