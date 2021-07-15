@@ -7,16 +7,18 @@ var navButton = document.querySelector('.nav__button');
 var menuLinks = document.querySelectorAll('.main-menu__link');
 var phoneInput = document.querySelector('#tel');
 var header = document.querySelector('.header');
-var navLogo = document.querySelector('.nav__logo');
 var menuOpened = false;
 
 // Enable JS - добавление/удаление классов при включенном JS
 
-header.classList.remove('header--nojs');
-mainMenu.classList.remove('main-menu--nojs');
-mainMenu.classList.add('main-menu--closed');
-navButton.classList.remove('nav__button--nojs');
-navLogo.classList.remove('nav__logo--nojs');
+var addActiveStatement = function () {
+  header.classList.add('active');
+  mainMenu.classList.add('main-menu--closed');
+};
+
+window.addEventListener('load', function () {
+  addActiveStatement();
+});
 
 // Navigation - обработка событии с кнопкой навигации и блокировка скролла
 

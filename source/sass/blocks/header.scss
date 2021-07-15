@@ -1,15 +1,15 @@
 .header {
   @include vp--1023 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-  }
-}
-
-.header--nojs {
-  @include vp--1023 {
     position: static;
     transform: none;
+  }
+
+  &.active {
+    @include vp--1023 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
   }
 }

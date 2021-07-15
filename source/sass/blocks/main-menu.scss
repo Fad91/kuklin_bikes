@@ -16,22 +16,25 @@
     padding: 0;
     width: 100%;
     z-index: 1;
+    overflow-y: hidden;
+  }
+}
+
+.active .main-menu {
+  position: static;
+
+  @include vp--1023 {
     overflow-y: scroll;
   }
 }
 
-.main-menu--nojs {
-  position: static;
-  overflow-y: hidden;
-}
-
-.main-menu--closed {
+.active .main-menu--closed {
   @include vp--1023 {
     display: none;
   }
 }
 
-.main-menu--opened {
+.active .main-menu--opened {
   @include vp--1023 {
     position: absolute;
     top: 0;

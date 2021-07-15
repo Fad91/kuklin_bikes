@@ -17,9 +17,18 @@
   display: none;
 
   @include vp--1023 {
+    display: block;
+    padding: 20px 10px;
+  }
+}
+
+.active .nav__logo {
+  display: none;
+
+  @include vp--1023 {
     display: flex;
     justify-content: space-between;
-    padding-left: 21px;
+    padding: 0 0 0 21px;
 
     @include vp--767 {
       padding-left: 17px;
@@ -27,19 +36,24 @@
   }
 }
 
-.nav__logo--nojs {
-  @include vp--1023 {
-    padding: 20px 10px;
-  }
-}
-
 .nav__link {
   @include vp--1023 {
+    padding: 0;
     align-self: flex-end;
+  }
+
+  @include vp--767 {
+    padding: 15px 0 10px 0;
   }
 }
 
 .nav__button {
+  @include vp--1023 {
+    display: none;
+  }
+}
+
+.active .nav__button {
   display: none;
 
   @include vp--1023 {
@@ -71,7 +85,7 @@
   }
 }
 
-.nav__button--open {
+.active .nav__button--open {
   @include vp--1023 {
     border: none;
     padding: 0;
@@ -80,6 +94,7 @@
     width: 50px;
     height: 50px;
     background-color: transparent;
+    margin-right: 15px;
 
     &::before,
     &::after {
@@ -105,11 +120,5 @@
       top: 6px;
       left: 24px;
     }
-  }
-}
-
-.nav__button--nojs {
-  @include vp--1023 {
-    display: none;
   }
 }

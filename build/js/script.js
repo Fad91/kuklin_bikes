@@ -5,20 +5,21 @@
 var mainMenu = document.querySelector('.main-menu');
 var navButton = document.querySelector('.nav__button');
 var menuLinks = document.querySelectorAll('.main-menu__link');
-var nameInput = document.querySelector('#name');
 var phoneInput = document.querySelector('#tel');
 var header = document.querySelector('.header');
-var navLogo = document.querySelector('.nav__logo');
-var feedbackForm = document.querySelector('.feedback-form form');
+// var navLogo = document.querySelector('.nav__logo');
 var menuOpened = false;
 
 // Enable JS - добавление/удаление классов при включенном JS
 
-header.classList.remove('header--nojs');
-mainMenu.classList.remove('main-menu--nojs');
-mainMenu.classList.add('main-menu--closed');
-navButton.classList.remove('nav__button--nojs');
-navLogo.classList.remove('nav__logo--nojs');
+var addActive = function () {
+  header.classList.add('active');
+  mainMenu.classList.add('main-menu--closed');
+};
+
+window.addEventListener('load', function () {
+  addActive();
+});
 
 // Navigation - обработка событии с кнопкой навигации и блокировка скролла
 
@@ -76,10 +77,3 @@ var triggers = document.querySelectorAll('.js-trigger');
 triggers.forEach(function (trigger) {
   moveTo.registerTrigger(trigger);
 });
-
-
-feedbackForm.addEventListener('submit', function () {
-  localStorage.setItem('Имя', nameInput.value);
-  localStorage.setItem('Телефон', phoneInput.value);
-});
-
