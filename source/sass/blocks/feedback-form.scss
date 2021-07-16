@@ -40,10 +40,12 @@
 
 .feedback-form input {
   width: 330px;
-  padding: 18px 10px 11px 31px;
+  padding: 12px 10px 8px 31px;
   border-radius: 6px;
   margin-bottom: 20px;
   transition: border $transition-base, box-shadow $transition-base;
+  font-size: 15px;
+  line-height: 24px;
 
   @include vp--1023 {
     width: 323px;
@@ -60,9 +62,8 @@
   }
 
   &:hover {
-    border: 1px solid $color-robins-egg-blue;
     box-shadow: 0 0 2px 3px $color-link-water;
-    transition: border $transition-base, box-shadow $transition-base;
+    transition: box-shadow $transition-base;
   }
 }
 
