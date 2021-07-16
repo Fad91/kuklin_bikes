@@ -1,17 +1,19 @@
 .links {
   width: 880px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  padding: 36px 128px 35px 117px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 36px 95px 35px 159px;
+  grid-column-gap: 92px;
 
   @include vp--1023 {
     width: 768px;
-    padding: 17px 72px 27px 62px;
+    padding: 17px 72px 27px 105px;
   }
 
   @include vp--767 {
     width: 320px;
+    display: flex;
     flex-direction: column;
     padding: 30px 20px 5px 26px;
     align-items: center;
@@ -21,7 +23,7 @@
 .links__link {
   color: $color-opacity-05-black;
   display: flex;
-  transition: $transition-05-color;
+  transition: color $transition-base;
 
   @include vp--767 {
     align-items: center;
@@ -30,15 +32,16 @@
 
   &:hover {
     color: $color-robins-egg-blue;
-    transition: $transition-05-color;
+    transition: color $transition-base;
   }
 
   &:active {
     color: $color-nero;
+    transition: none;
   }
 }
 
-.links a:nth-child(2n) {
+.links__link--phone {
   @include vp--767 {
     align-self: flex-start;
     padding-left: 37px;

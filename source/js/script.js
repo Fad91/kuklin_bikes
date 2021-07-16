@@ -64,33 +64,45 @@ if (navButton) {
   });
 }
 
-menuLinks.forEach(function (menuLink) {
-  menuLink.addEventListener('click', function () {
-    hideMenu();
+var clickOnLink = function () {
+  menuLinks.forEach(function (menuLink) {
+    menuLink.addEventListener('click', function () {
+      hideMenu();
+    });
   });
-});
+};
+
+clickOnLink();
 
 // Изменение placeholder при фокусе и отмене фокуса
 
-if (phoneInput) {
-  phoneInput.addEventListener('focus', function () {
-    phoneInput.placeholder = '+7XXXXXXXXXX';
-  });
+var changePlaceholder = function () {
+  if (phoneInput) {
+    phoneInput.addEventListener('focus', function () {
+      phoneInput.placeholder = '+7XXXXXXXXXX';
+    });
 
-  phoneInput.addEventListener('blur', function () {
-    phoneInput.placeholder = 'Введите Ваш номер телефона';
-  });
-}
+    phoneInput.addEventListener('blur', function () {
+      phoneInput.placeholder = 'Введите Ваш номер телефона';
+    });
+  }
+};
+
+changePlaceholder();
 
 // Smooth scroll - плавный скролл
 
+var addSmoothScroll = function () {
 // eslint-disable-next-line no-undef
-var moveTo = new MoveTo({
-  duration: 1200,
-});
+  var moveTo = new MoveTo({
+    duration: 1200,
+  });
 
-var triggers = document.querySelectorAll('.js-trigger');
+  var triggers = document.querySelectorAll('.js-trigger');
 
-triggers.forEach(function (trigger) {
-  moveTo.registerTrigger(trigger);
-});
+  triggers.forEach(function (trigger) {
+    moveTo.registerTrigger(trigger);
+  });
+};
+
+addSmoothScroll();

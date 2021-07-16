@@ -99,7 +99,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  transition: $transition-05-box-shadow;
+  transition: box-shadow $transition-base;
 
   @include vp--1023 {
     width: 90px;
@@ -113,7 +113,7 @@
 
   &:hover {
     box-shadow: 0 0 3px 5px $color-opacity-02-white;
-    transition: $transition-05-box-shadow;
+    transition: box-shadow $transition-base;
   }
 
   &:active {
@@ -122,6 +122,8 @@
 }
 
 .video-section__item svg {
+  transform: translate(2px, 2px);
+
   @include vp--1023 {
     width: 18px;
     height: 30px;
@@ -134,6 +136,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-35%, -50%);
   }
 }

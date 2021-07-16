@@ -46,6 +46,7 @@
 
 .main-menu__item {
   cursor: pointer;
+  letter-spacing: -0.005em;
 
   @include vp--1023 {
     font-weight: 400;
@@ -59,7 +60,7 @@
 
 .main-menu__link {
   color: inherit;
-  transition: $transition-05-color;
+  transition: color $transition-base;
 
   @include vp--1023 {
     padding: 14px 0;
@@ -71,7 +72,7 @@
 
   &:hover {
     color: $color-default-white;
-    transition: $transition-05-color;
+    transition: color $transition-base;
 
     @include vp--1023 {
       color: $color-default-black;
@@ -81,6 +82,7 @@
 
   &:active {
     color: $color-robins-egg-blue;
+    transition: none;
   }
 }
 
@@ -89,12 +91,12 @@
 
   @include vp--1023 {
     display: block;
-    transition: $transition-rotate-and-stroke-color;
+    transition: transform $transition-base, stroke $transition-base;
   }
 
   &:hover {
-    transition: $transition-rotate-and-stroke-color;
     transform: rotate(90deg);
     stroke: $color-default-black;
+    transition: transform $transition-base, stroke $transition-base;
   }
 }

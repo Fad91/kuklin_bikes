@@ -1,6 +1,6 @@
 .text-block {
   width: 400px;
-  padding: 10px 3px;
+  padding: 10px 0;
 
   @include vp--1023 {
     width: 100%;
@@ -19,12 +19,12 @@
 
   @include vp--767 {
     width: 100%;
-    background-image: url("../img/desktop-bike-background.jpg");
+    background-image: url("../img/mobile-bike-background.jpg");
     padding: 121px 0 69px;
-    background-size: auto 390px;
+    background-size: 100% 390px;
 
     @include retina {
-      background-image: url("../img/desktop-bike-background@2x.jpg");
+      background-image: url("../img/mobile-bike-background@2x.jpg");
     }
   }
 }
@@ -35,7 +35,7 @@
   font-size: 46px;
   line-height: 64px;
   margin: 0 0 24px 0;
-  letter-spacing: 1px;
+  letter-spacing: -0.005em;
 
   @include vp--1023 {
     font-size: 30px;
@@ -55,6 +55,7 @@
   font-size: 20px;
   line-height: 32px;
   margin: 0;
+  letter-spacing: -0.005em;
 
   @include vp--1023 {
     font-size: 18px;

@@ -1,5 +1,5 @@
 .page-body {
   display: grid;
-  grid-template-rows: 1fr auto min-content;
+  grid-template-rows: min-content auto min-content;
   overflow-x: hidden;
 }

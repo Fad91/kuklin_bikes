@@ -12,7 +12,7 @@
 
   @include vp--767 {
     padding: 69px 15px 33px 15px;
-    width: 320px;
+    width: 100%;
     align-items: center;
   }
 }
@@ -24,7 +24,7 @@
   color: $color-default-white;
   text-align: center;
   margin: 0 0 20px 0;
-  letter-spacing: 0.3px;
+  letter-spacing: -0.005em;
 
   @include vp--1023 {
     margin: 0 0 29px 0;
@@ -39,12 +39,11 @@
 }
 
 .feedback-form input {
-  width: 327px;
-  padding: 19px 10px 11px 34px;
-  border: 1px solid $color-link-water;
+  width: 330px;
+  padding: 18px 10px 11px 31px;
   border-radius: 6px;
   margin-bottom: 20px;
-  transition: $transition-border-and-box-shadow;
+  transition: border $transition-base, box-shadow $transition-base;
 
   @include vp--1023 {
     width: 323px;
@@ -55,7 +54,7 @@
   }
 
   @include vp--767 {
-    width: 288px;
+    width: 100%;
     padding: 12px 10px 11px 27px;
     margin-bottom: 18px;
   }
@@ -63,7 +62,7 @@
   &:hover {
     border: 1px solid $color-robins-egg-blue;
     box-shadow: 0 0 2px 3px $color-link-water;
-    transition: $transition-border-and-box-shadow;
+    transition: border $transition-base, box-shadow $transition-base;
   }
 }
 
@@ -71,6 +70,9 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  opacity: 0.5;
+  color: $color-nero;
+  letter-spacing: 0.2px;
 }
 
 .feedback-form button {
@@ -81,18 +83,19 @@
   font-size: 15px;
   line-height: 21px;
   text-align: center;
-  padding: 17px 47px 14px 47px;
+  padding: 17px 47px 13px 51px;
+  letter-spacing: 0.16px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: $transition-color-text-decoration-shadow;
+  transition: color $transition-base, text-decoration $transition-base, box-shadow $transition-base;
 
   @include vp--1023 {
     width: 323px;
   }
 
   @include vp--767 {
-    width: 288px;
+    width: 100%;
     padding: 13px 28px;
   }
 
@@ -100,10 +103,11 @@
     color: $color-opacity-05-black;
     text-decoration: underline;
     box-shadow: 0 0 5px 2px $color-link-water;
-    transition: $transition-color-text-decoration-shadow;
+    transition: color $transition-base, text-decoration $transition-base, box-shadow $transition-base;
   }
 
   &:active {
     box-shadow: 0 0 5px 3px $color-opacity-07-white;
+    transition: none;
   }
 }
