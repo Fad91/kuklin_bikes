@@ -10,6 +10,8 @@ var nameInput = document.querySelector('#name');
 var phoneInput = document.querySelector('#tel');
 var header = document.querySelector('.header');
 var COUNTRY_CODE = '+7';
+var NAME_LENGTH = 2;
+var PHONE_LENGTH = 17;
 var length = COUNTRY_CODE.length;
 var menuOpened = false;
 
@@ -79,7 +81,7 @@ clickOnLink();
 // Валидация формы
 
 var replacePhoneValue = function (el) {
-  var matrix = COUNTRY_CODE + '(___) ___ __ __';
+  var matrix = COUNTRY_CODE + '' + '(___) ___ __ __';
   var def = matrix.replace(/\D/g, '');
   var i = 0;
   var val = el.value.replace(/\D/g, '');
@@ -87,20 +89,19 @@ var replacePhoneValue = function (el) {
     val = def;
   }
   el.value = matrix.replace(/./g, function (a) {
-    return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
-    // if (/[_\d]/.test(a) && i < val.length) {
-    //   return val.charAt(i++);
-    // }
-    // if (i >= val.length) {
-    //   return '';
-    // } else {
-    //   return a;
-    // }
+    if (/[_\d]/.test(a) && i < val.length) {
+      return val.charAt(i++);
+    } if (i >= val.length) {
+      return '';
+    } else {
+      return a;
+    }
   });
 };
 var onInputPhoneInput = function (e) {
-  replacePhoneValue(e.target.value);
+  replacePhoneValue(e.target);
 };
+
 var onFocusPhoneInput = function (e) {
   if (!e.target.value) {
     e.target.value = COUNTRY_CODE;
@@ -109,6 +110,7 @@ var onFocusPhoneInput = function (e) {
     e.target.addEventListener('keydown', onKeydownPhoneInput);
   }
 };
+
 var onKeydownPhoneInput = function (e) {
   if (e.target.selectionStart <= length && e.keyCode !== 8 && e.keyCode !== 46) {
     e.target.setSelectionRange(length, length);
@@ -120,6 +122,7 @@ var onKeydownPhoneInput = function (e) {
     e.preventDefault();
   }
 };
+
 var onBlurPhoneInput = function (e) {
   if (e.target.value === COUNTRY_CODE) {
     e.target.value = '';
@@ -127,6 +130,7 @@ var onBlurPhoneInput = function (e) {
     e.target.removeEventListener('blur', onBlurPhoneInput);
   }
 };
+
 var initPhoneMask = function () {
   phoneInput.addEventListener('focus', onFocusPhoneInput);
   if (phoneInput.value) {
@@ -136,6 +140,7 @@ var initPhoneMask = function () {
     phoneInput.addEventListener('keydown', onKeydownPhoneInput);
   }
 };
+
 var validateInput = function (input, inputLength) {
   var flag = true;
   if (input.value.length < inputLength) {
@@ -144,6 +149,7 @@ var validateInput = function (input, inputLength) {
   }
   return flag;
 };
+
 var cleanInputs = function () {
   nameInput.addEventListener('input', function () {
     nameInput.classList.remove('has-error');
@@ -152,6 +158,7 @@ var cleanInputs = function () {
     phoneInput.classList.remove('has-error');
   });
 };
+
 var initFormValidate = function () {
   if (!form) {
     return;
@@ -160,16 +167,17 @@ var initFormValidate = function () {
   cleanInputs();
   initPhoneMask();
   form.addEventListener('submit', function (e) {
-    validateInput(nameInput, 2);
-    validateInput(phoneInput, 17);
+    validateInput(nameInput, NAME_LENGTH);
+    validateInput(phoneInput, PHONE_LENGTH);
     e.preventDefault();
-    if (validateInput(nameInput, 2) || validateInput(phoneInput, 17)) {
+    if (validateInput(nameInput, NAME_LENGTH) || validateInput(phoneInput, PHONE_LENGTH)) {
       setTimeout(function () {
         form.reset();
       }, 500);
     }
   });
 };
+
 initFormValidate();
 
 // Smooth scroll - плавный скролл
