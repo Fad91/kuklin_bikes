@@ -1,17 +1,17 @@
 .feedback-form {
   display: flex;
   flex-direction: column;
-  width: 330px;
+  width: 328px;
   padding: 13px 0 13px 0;
 
   @include vp--1023 {
     padding: 70px 12px 33px 12px;
-    width: 350px;
+    width: 347px;
     margin: 0 auto;
   }
 
   @include vp--767 {
-    padding: 69px 15px 33px 15px;
+    padding: 69px 16px 33px 16px;
     width: 100%;
     align-items: center;
   }
@@ -34,22 +34,26 @@
 
   @include vp--767 {
     padding: 0;
-    margin: 0 0 21px 0;
+    margin: 0 0 20px 0;
+    max-width: 320px;
   }
 }
 
 .feedback-form input {
-  width: 330px;
-  padding: 12px 10px 8px 31px;
+  width: 327px;
+  padding: 13px 31px 9px 31px;
   border-radius: 6px;
   margin-bottom: 20px;
   transition: border $transition-base, box-shadow $transition-base;
   font-size: 15px;
   line-height: 24px;
+  border: 1px solid $color-link-water;
+  letter-spacing: 0.2px;
+
 
   @include vp--1023 {
     width: 323px;
-    padding: 12px 8px 10px 26px;
+    padding: 12px 21px 11px 21px;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
@@ -57,8 +61,8 @@
 
   @include vp--767 {
     width: 100%;
-    padding: 12px 10px 11px 27px;
-    margin-bottom: 18px;
+    padding: 12px 25px 10px 25px;
+    margin-bottom: 20px;
   }
 
   &:hover {
@@ -67,13 +71,8 @@
   }
 }
 
-.feedback-form input::placeholder {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  opacity: 0.5;
-  color: $color-nero;
-  letter-spacing: 0.2px;
+.feedback-form input.has-error {
+  box-shadow: 0 0 2px 2px $color-red;
 }
 
 .feedback-form button {
@@ -84,7 +83,7 @@
   font-size: 15px;
   line-height: 21px;
   text-align: center;
-  padding: 17px 47px 13px 51px;
+  padding: 17px 35px 13px 36px;
   letter-spacing: 0.16px;
   border: none;
   border-radius: 6px;
@@ -97,7 +96,7 @@
 
   @include vp--767 {
     width: 100%;
-    padding: 13px 28px;
+    padding: 14px 28px;
   }
 
   &:hover {

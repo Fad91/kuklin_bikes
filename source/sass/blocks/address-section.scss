@@ -41,18 +41,15 @@
   text-align: center;
   width: 555px;
   margin-bottom: 40px;
-  letter-spacing: 0.3px;
 
   @include vp--1023 {
     color: $color-opacity-07-black;
     width: 100%;
     margin: 0 0 20px 0;
-    letter-spacing: 0.4px;
   }
 
   @include vp--767 {
     padding: 0 29px;
-    letter-spacing: 0.6px;
   }
 }
 

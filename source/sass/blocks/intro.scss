@@ -1,9 +1,9 @@
 .intro {
   background-image: url("../img/desktop-bike-background.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-color: $color-bunker;
-  background-size: 100% 825px;
+  background-size: cover;
 
   @include retina {
     background-image: url("../img/desktop-bike-background@2x.jpg");

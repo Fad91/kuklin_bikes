@@ -52,7 +52,7 @@
   text-align: center;
   color: $color-opacity-07-white;
   width: 340px;
-  margin: 0 0 54px 0;
+  margin: 0 0 55px 0;
 
   @include vp--1023 {
     width: 430px;
@@ -136,6 +136,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-35%, -50%);
+    transform: translate(-35%, -59%);
   }
 }

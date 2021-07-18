@@ -42,7 +42,7 @@
     }
 
     @include vp--767 {
-      top: 204px;
+      top: 199px;
       left: -24px;
       width: 127px;
       height: 127px;
@@ -71,6 +71,7 @@
     height: 47px;
     background-image: url("../img/desktop-square-icon.svg");
     position: absolute;
+    z-index: 1;
 
     @include vp--1023 {
       display: none;
@@ -109,8 +110,8 @@
     }
 
     @include vp--767 {
-      top: -23px;
-      right: -17px;
+      top: -21px;
+      right: -15px;
     }
   }
 }
@@ -122,13 +123,15 @@
   line-height: 34px;
   text-align: center;
   margin: 17px 0 0;
+  letter-spacing: -0.5px;
+  transition: color $transition-base;
 
   @include vp--1023 {
     margin: 14px 0 0;
   }
 
   @include vp--767 {
-    margin: 18px 0 0;
+    margin: 17px 0 0;
   }
 }
 
@@ -140,6 +143,6 @@
   &:hover {
     transform: scale(1.02);
     color: $color-robins-egg-blue;
-    transition: transform $transition-base;
+    transition: transform $transition-base, color $transition-base;
   }
 }

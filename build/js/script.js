@@ -5,8 +5,12 @@
 var mainMenu = document.querySelector('.main-menu');
 var navButton = document.querySelector('.nav__button');
 var menuLinks = document.querySelectorAll('.main-menu__link');
+var form = document.querySelector('.feedback-form form');
+var nameInput = document.querySelector('#name');
 var phoneInput = document.querySelector('#tel');
 var header = document.querySelector('.header');
+var COUNTRY_CODE = '+7';
+var length = COUNTRY_CODE.length;
 var menuOpened = false;
 
 // Enable JS - добавление/удаление классов при включенном JS
@@ -17,8 +21,6 @@ var addActiveStatement = function () {
   }
   if (mainMenu) {
     mainMenu.classList.add('main-menu--closed');
-  } else {
-    return;
   }
 };
 
@@ -36,8 +38,6 @@ var showMenu = function () {
     // eslint-disable-next-line no-undef
     bodyScrollLock.disableBodyScroll(mainMenu);
     menuOpened = true;
-  } else {
-    return;
   }
 };
 
@@ -49,20 +49,22 @@ var hideMenu = function () {
     // eslint-disable-next-line no-undef
     bodyScrollLock.enableBodyScroll(mainMenu);
     menuOpened = false;
-  } else {
-    return;
   }
 };
 
-if (navButton) {
-  navButton.addEventListener('click', function () {
-    if (menuOpened) {
-      hideMenu();
-    } else {
-      showMenu();
-    }
-  });
-}
+var changeMenuStatement = function () {
+  if (navButton) {
+    navButton.addEventListener('click', function () {
+      if (menuOpened) {
+        hideMenu();
+      } else {
+        showMenu();
+      }
+    });
+  }
+};
+
+changeMenuStatement();
 
 var clickOnLink = function () {
   menuLinks.forEach(function (menuLink) {
@@ -74,21 +76,101 @@ var clickOnLink = function () {
 
 clickOnLink();
 
-// Изменение placeholder при фокусе и отмене фокуса
+// Валидация формы
 
-var changePlaceholder = function () {
-  if (phoneInput) {
-    phoneInput.addEventListener('focus', function () {
-      phoneInput.placeholder = '+7XXXXXXXXXX';
-    });
-
-    phoneInput.addEventListener('blur', function () {
-      phoneInput.placeholder = 'Введите Ваш номер телефона';
-    });
+var replacePhoneValue = function (el) {
+  var matrix = COUNTRY_CODE + '(___) ___ __ __';
+  var def = matrix.replace(/\D/g, '');
+  var i = 0;
+  var val = el.value.replace(/\D/g, '');
+  if (def.length >= val.length) {
+    val = def;
+  }
+  el.value = matrix.replace(/./g, function (a) {
+    return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+    // if (/[_\d]/.test(a) && i < val.length) {
+    //   return val.charAt(i++);
+    // }
+    // if (i >= val.length) {
+    //   return '';
+    // } else {
+    //   return a;
+    // }
+  });
+};
+var onInputPhoneInput = function (e) {
+  replacePhoneValue(e.target.value);
+};
+var onFocusPhoneInput = function (e) {
+  if (!e.target.value) {
+    e.target.value = COUNTRY_CODE;
+    e.target.addEventListener('input', onInputPhoneInput);
+    e.target.addEventListener('blur', onBlurPhoneInput);
+    e.target.addEventListener('keydown', onKeydownPhoneInput);
   }
 };
-
-changePlaceholder();
+var onKeydownPhoneInput = function (e) {
+  if (e.target.selectionStart <= length && e.keyCode !== 8 && e.keyCode !== 46) {
+    e.target.setSelectionRange(length, length);
+  }
+  if ((e.target.selectionStart === length || e.target.selectionStart === 1) && e.keyCode === 8) {
+    e.preventDefault();
+  }
+  if (e.target.selectionStart === 1 && e.keyCode === 46) {
+    e.preventDefault();
+  }
+};
+var onBlurPhoneInput = function (e) {
+  if (e.target.value === COUNTRY_CODE) {
+    e.target.value = '';
+    e.target.removeEventListener('input', onInputPhoneInput);
+    e.target.removeEventListener('blur', onBlurPhoneInput);
+  }
+};
+var initPhoneMask = function () {
+  phoneInput.addEventListener('focus', onFocusPhoneInput);
+  if (phoneInput.value) {
+    replacePhoneValue(phoneInput);
+    phoneInput.addEventListener('input', onInputPhoneInput);
+    phoneInput.addEventListener('blur', onBlurPhoneInput);
+    phoneInput.addEventListener('keydown', onKeydownPhoneInput);
+  }
+};
+var validateInput = function (input, inputLength) {
+  var flag = true;
+  if (input.value.length < inputLength) {
+    flag = false;
+    input.classList.add('has-error');
+  }
+  return flag;
+};
+var cleanInputs = function () {
+  nameInput.addEventListener('input', function () {
+    nameInput.classList.remove('has-error');
+  });
+  phoneInput.addEventListener('input', function () {
+    phoneInput.classList.remove('has-error');
+  });
+};
+var initFormValidate = function () {
+  if (!form) {
+    return;
+  }
+  form.noValidate = true;
+  cleanInputs();
+  initPhoneMask();
+  form.addEventListener('submit', function (e) {
+    validateInput(nameInput, 2);
+    validateInput(phoneInput, 17);
+    e.preventDefault();
+    if (validateInput(nameInput, 2) || validateInput(phoneInput, 17)) {
+      setTimeout(function () {
+        form.reset();
+      }, 500);
+    }
+  });
+};
+initFormValidate();
 
 // Smooth scroll - плавный скролл
 
