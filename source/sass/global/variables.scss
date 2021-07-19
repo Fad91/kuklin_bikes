@@ -30,8 +30,9 @@ $color-red: #ff0000;
 
 // Gradients
 
-$gradient-black-to-white: linear-gradient(to bottom, $color-black-russian 88%, $color-default-white 88%);
+$gradient-black-to-white: linear-gradient(to bottom, $color-black-russian 706px, $color-default-white 706px);
 $gradient-black-to-white-tablet: linear-gradient(to bottom, $color-black-russian 82%, $color-default-white 82%);
+$gradient-black-to-white-mobile: linear-gradient(to bottom, $color-black-russian 384px, $color-default-white 384px);
 
 // Typography
 

@@ -163,6 +163,7 @@ var initFormValidate = function () {
   if (!form) {
     return;
   }
+
   form.noValidate = true;
   cleanInputs();
   initPhoneMask();
