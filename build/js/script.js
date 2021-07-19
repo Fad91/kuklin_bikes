@@ -81,7 +81,7 @@ clickOnLink();
 // Валидация формы
 
 var replacePhoneValue = function (el) {
-  var matrix = COUNTRY_CODE + '' + '(___) ___ __ __';
+  var matrix = COUNTRY_CODE + ' ' + '(___) ___ __ __';
   var def = matrix.replace(/\D/g, '');
   var i = 0;
   var val = el.value.replace(/\D/g, '');
